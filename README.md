@@ -1,1 +1,1 @@
-# digitalsoft.uz Web sayti
+# digitalsoft.uz [digitalsoft.uz](digitalsoft.uz) Web sayti
