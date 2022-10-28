@@ -7,6 +7,15 @@
   height: 900px;
 }
 
+#tsparticles {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,6 +30,7 @@
   padding: 0 150px;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header__left {
@@ -84,6 +94,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  padding: 30px;
 }
 
 .header__right svg {
@@ -92,15 +103,26 @@
 
 .sphere__header {
   position: absolute;
-  -webkit-animation: sphere 15s linear infinite;
-          animation: sphere 15s linear infinite;
   pointer-events: none;
   padding: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
 }
 
 .sphere__header img {
-  width: 100%;
+  width: 95%;
+  height: 95%;
   height: auto;
+  -webkit-animation: sphere 15s linear infinite;
+          animation: sphere 15s linear infinite;
 }
 
 @-webkit-keyframes sphere {
@@ -332,17 +354,20 @@
     grid-gap: 10px;
   }
   .header__left h1 {
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 36px;
+    line-height: 40px;
   }
   .header__left h2 {
-    font-size: 27px;
-    line-height: 32px;
+    font-size: 23px;
+    line-height: 30px;
   }
   .header__left a {
     width: 220px;
     height: 50px;
     font-size: 17px;
+  }
+  .sphere__header {
+    padding: 10px;
   }
 }
 

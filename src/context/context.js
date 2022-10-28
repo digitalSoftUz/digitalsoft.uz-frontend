@@ -23,7 +23,7 @@ class Mode extends Component {
     window.removeEventListener('scroll', this.listenToScroll)
   }
   render() { 
-    console.log(this.state.scroll)
+    // console.log(this.state.scroll)
     return ( 
       <DS.Provider
         value={{
