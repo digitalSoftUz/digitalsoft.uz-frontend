@@ -21,7 +21,7 @@ const Xizmatlar = () => {
         <div className="xizmatlar__items">
           {dataXizmatlar?.map((item, index)=>{
             return(
-              <div className="xizmatlar__item">
+              <div className="xizmatlar__item" key={index}>
                 <div>
                   <h1>{item.title}</h1>
                   <img src={item.img} alt="" />

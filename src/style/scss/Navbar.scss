@@ -35,6 +35,11 @@
     border: 1px solid #ffffff;
     padding: 11px 20px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 200px;
+    // height: 45px;
   }
 }
 .logo{
@@ -104,7 +109,7 @@
     }
   }
 }
-@media (max-width:900px) {
+@media (max-width:1000px) {
   .navbar{
     .nav{
       flex-direction: column;

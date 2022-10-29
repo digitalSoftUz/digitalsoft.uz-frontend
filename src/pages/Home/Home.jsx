@@ -16,18 +16,18 @@ import Contact from './Contact/Contact';
 const Home = () => {
   return (
     <React.Fragment>
-      <Header/>
-      <Partnyors/>
-      <Xizmatlar/>
-      <Jarayon/>
-      <Jamoa/>
-      <Hamkorlik/>
-      <Boshlash/>
-      <Texnologiyalar/>
-      <Xizmat/>
-      <Proyekts/>
-      <Savollar/>
-      <Contact/>
+      <Header/> {/* tayyor */}
+      <Partnyors/> {/* tayyor */}
+      <Xizmatlar/> {/* tayyor */}
+      <Jarayon/> {/* tayyor */}
+      <Jamoa/> {/* tayyor */}
+      <Hamkorlik/> {/*  */}
+      <Boshlash/> {/* tayyor */}
+      <Texnologiyalar/> {/*  */}
+      <Xizmat/> {/*  */}
+      <Proyekts/> {/*  */}
+      <Savollar/> {/*  */}
+      <Contact/> {/*  */}
     </React.Fragment>
   )
 }

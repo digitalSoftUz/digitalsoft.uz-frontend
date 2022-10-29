@@ -4,7 +4,7 @@ import { loadFull } from "tsparticles";
 
 const ParticleChars = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
+    // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -12,9 +12,8 @@ const ParticleChars = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    // await console.log(container);
   }, []);
-
   return (
     <Particles
       id="tsparticles"
@@ -30,11 +29,15 @@ const ParticleChars = () => {
         particles: {
           links: {
             enable: true,
-            distance: 200
+            distance: 180
+          },
+          number:{
+            value: 120,
+            limit: 100
           },
           move: {
             enable: true,
-            speed: 5,
+            speed: 4,
             outModes: {
               default: "bounce"
             }

@@ -1,19 +1,25 @@
 .header {
   z-index: 2;
   padding-top: 110px;
-  background: url(../../assets/images/Header_bg.png);
+  background: url(../../assets/images/Header_bg.webp);
   background-position: center;
   background-size: cover;
   height: 900px;
+  overflow: hidden;
+  position: relative;
 }
 
-#tsparticles {
+#tsparticles, #tsparticles2 {
   position: absolute;
   height: 100vh;
   width: 100vw;
   z-index: -1;
   top: 0;
   left: 0;
+}
+
+#tsparticles2 {
+  display: none;
 }
 
 .header__container {
@@ -378,6 +384,12 @@
   }
   .header__right {
     display: none;
+  }
+  #tsparticles {
+    display: none;
+  }
+  #tsparticles2 {
+    display: block;
   }
 }
 

@@ -22,7 +22,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background: #3A1163;
+  background: #5A048E;
 }
 body::-webkit-scrollbar {
   width: 0.4em;
@@ -36,6 +36,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #3A1163;
   border-radius: 2px;
 }
+#root{
+  overflow: hidden;
+}
 a{
   text-decoration: none;
 }
@@ -46,6 +49,23 @@ p, h1, h2, h3, h4, h5, h6{
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 150px;
+}
+.h1__title{
+  font-family: 'Alien Robot';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.h2__title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #CEB3DB;
 }
 @media (max-width:1600px) {
   .container,.header__container{
@@ -66,9 +86,45 @@ p, h1, h2, h3, h4, h5, h6{
   .container,.header__container{
     padding: 0 30px;
   }
+  .h1__title{
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .h2__title{
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+@media (max-width:768px) {
+  .h1__title{
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .h2__title{
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 @media (max-width:425px) {
   .container,.header__container{
     padding: 0 10px;
+  }
+  .h1__title{
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .h2__title{
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (max-width:375px) {
+  .h1__title{
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .h2__title{
+    font-size: 16px;
+    line-height: 23px;
   }
 }

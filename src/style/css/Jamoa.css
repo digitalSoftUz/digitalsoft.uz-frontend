@@ -1,1 +1,313 @@
-/* No CSS */
+.jamoa {
+  background: #3A1163;
+  margin: 0 auto;
+  padding: 100px 0;
+  margin-top: 100px;
+}
+
+.jamoa__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
+}
+
+.jamoa__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.jamoa__info h1 {
+  font-family: 'Alien Robot';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  color: #FFFFFF;
+}
+
+.jamoa__info p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #CEB3DB;
+  margin-top: 30px;
+}
+
+.jamoa__info span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jamoa__info span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 24px;
+  position: relative;
+}
+
+.jamoa__info span div::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  background: rgba(173, 162, 242, 0.2);
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: check_svg 2s linear infinite alternate;
+          animation: check_svg 2s linear infinite alternate;
+}
+
+.jamoa__info span svg {
+  background: #0066FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@-webkit-keyframes check_svg {
+  from {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes check_svg {
+  from {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.jamoa__galery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1.2fr;
+      grid-template-columns: 1fr 1fr 1.2fr;
+  -ms-grid-rows: (95px)[6];
+      grid-template-rows: repeat(6, 95px);
+      grid-template-areas: "G1 G1 G4"  "G1 G1 G4" "G2 G2 G4" "G2 G2 G5" "G3 G3 G5" "G3 G3 G5";
+  grid-gap: 20px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+.jamoa__image {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+.jamoa__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+.jamoa__image:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: G1;
+}
+
+.jamoa__image:nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: G2;
+}
+
+.jamoa__image:nth-child(3) {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: G3;
+}
+
+.jamoa__image:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: G4;
+}
+
+.jamoa__image:nth-child(5) {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: G5;
+}
+
+@media (max-width: 1440px) {
+  .jamoa__info h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .jamoa__info p {
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .jamoa__container {
+    -ms-grid-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1.2fr;
+  }
+  .jamoa__galery {
+    grid-gap: 10px;
+  }
+  .jamoa__info h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .jamoa__info p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 25px;
+  }
+  .jamoa__info span {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .jamoa__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .jamoa__galery {
+    margin-top: 50px;
+    -ms-grid-rows: (200px)[2];
+        grid-template-rows: repeat(2, 200px);
+    -ms-grid-columns: 2fr 1.5fr 2fr;
+        grid-template-columns: 2fr 1.5fr 2fr;
+        grid-template-areas: "G1 G4 G3"  "G2 G4 G5";
+  }
+  .jamoa__info {
+    margin-left: 0;
+  }
+  .jamoa {
+    margin-top: 70px;
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .jamoa__info h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .jamoa__info p {
+    font-size: 17px;
+    line-height: 23px;
+    margin-top: 20px;
+  }
+  .jamoa__info span {
+    font-size: 17px;
+    line-height: 23px;
+    margin-top: 30px;
+  }
+  .jamoa__info span svg {
+    width: 25px;
+    height: 25px;
+  }
+  .jamoa__info span div {
+    margin-right: 20px;
+  }
+  .jamoa__info span div::before {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .jamoa__galery {
+    -ms-grid-columns: 1fr 1fr 1.3fr;
+        grid-template-columns: 1fr 1fr 1.3fr;
+    -ms-grid-rows: (80px)[6];
+        grid-template-rows: repeat(6, 80px);
+        grid-template-areas: "G1 G1 G4"  "G1 G1 G4" "G2 G2 G4" "G2 G2 G5" "G3 G3 G5" "G3 G3 G5";
+  }
+}
+
+@media (max-width: 425px) {
+  .jamoa__galery {
+    -ms-grid-columns: 1fr 1fr 1.4fr;
+        grid-template-columns: 1fr 1fr 1.4fr;
+    -ms-grid-rows: (60px)[6];
+        grid-template-rows: repeat(6, 60px);
+  }
+}
+
+@media (max-width: 375px) {
+  .jamoa__galery {
+    -ms-grid-rows: (55px)[6];
+        grid-template-rows: repeat(6, 55px);
+  }
+  .jamoa__info h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .jamoa__info p, .jamoa__info span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .jamoa__info p div, .jamoa__info span div {
+    margin-right: 15px;
+  }
+  .jamoa {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+}
