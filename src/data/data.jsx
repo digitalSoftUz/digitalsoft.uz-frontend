@@ -55,12 +55,29 @@ import sass from "../assets/images/tech/sass.png"
 import vue from "../assets/images/tech/vue.png"
 import mui from "../assets/images/tech/mui.png"
 import antd from "../assets/images/tech/antd.svg"
-//
+// mobil
 import flutter from "../assets/images/tech/flutter.png"
 import android from "../assets/images/tech/android.png"
 import kotlin from "../assets/images/tech/kotlin.png"
 import ios from "../assets/images/tech/ios.png"
 import swift from "../assets/images/tech/swift.png"
+// xizmat
+import imgX1 from "../assets/images/xizmat/img1.png"
+import imgX2 from "../assets/images/xizmat/img2.png"
+import imgX3 from "../assets/images/xizmat/img3.png"
+import imgX4 from "../assets/images/xizmat/img4.png"
+// progects
+import imgP1 from "../assets/images/Progects/img1.png"
+import imgP2 from "../assets/images/Progects/img2.png"
+import imgP3 from "../assets/images/Progects/img3.png"
+import imgP4 from "../assets/images/Progects/img4.png"
+//
+import imgC from "../assets/images/comment.webp"
+import imgH1 from "../assets/images/Hamkorlik/img1.png"
+import imgH2 from "../assets/images/Hamkorlik/img2.png"
+import imgH3 from "../assets/images/Hamkorlik/img3.png"
+import imgH4 from "../assets/images/Hamkorlik/img4.png"
+
 
 export const dataPartnyors = [
   {
@@ -320,4 +337,170 @@ export const dataTech = [
       },
     ]
   }
+]
+export const dataXizmat = [
+  {
+    title:"Sog'liqni saqlash",
+    description:"Biz shifokorlarning ehtiyojlarini qondiradigan aqlli sog'liqni saqlash dasturlarini yaratamiz",
+    img:imgX1
+  },
+  {
+    title:"Sayohat va turizm",
+    description:"Sayohat dasturlarini ishlab chiqish guruhimiz sanoat shartlarini tushunadi va yordam beradi",
+    img:imgX2
+  },
+  {
+    title:"Bank va moliya",
+    description:"Biz fintech va moliyaviy tashkilotlarga maxsus dasturiy ta'minot xizmatlarini taqdim etamiz",
+    img:imgX3
+  },
+  {
+    title:"Chakana savdo va elektron tijorat",
+    description:"Biz B2B (Biznes-to-Business), B2C (Biznes-to-Consumer)",
+    img:imgX4
+  },
+]
+export const dataProgects = [
+  {
+    title:"Hokimiyat web sayti",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP1,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  },
+  {
+    title:"Apteki.uz web sayt va mobil ilova",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP2,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  },
+  {
+    title:"Hokim akademiyasi web sayti",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP3,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  },
+  {
+    title:"Hokimiyat web sayti",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP4,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  },{
+    title:"Hokimiyat web sayti",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP1,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  },
+  {
+    title:"Apteki.uz web sayt va mobil ilova",
+    description:"Ushbu moliyaviy mobil ilova tez va tezkor tranzaksiyalarni amalga oshirish uchun ishlab chiqilgan bo'lib, kredit dasturlarida ham foydalidir.",
+    img:imgP2,
+    techs:[
+      { img: react },
+      { img: python },
+      { img: js },
+      { img: html },
+    ]
+  }
+]
+export const dataComment = [
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+  {
+    img: imgC
+  },
+]
+export const dataSavol = [
+  {
+    title:"Nega men dasturiy ta'minot muhandisligi, konsalting va autsorsing uchun ValueCoders-ni tanlashim kerak?",
+    text:"Nega men dasturiy ta'minot muhandisligi, konsalting va autsorsing uchun ValueCoders-ni tanlashim kerak?"
+  },
+  {
+    title:"Uzoq muddatli hamkorlik qilishdan oldin ValueCoders xizmatlarini sinab ko'rishim mumkinmi?",
+    text:"Uzoq muddatli hamkorlik qilishdan oldin ValueCoders xizmatlarini sinab ko'rishim mumkinmi?"
+  },
+  {
+    title:"Nima uchun men Hindistondagi Digital Soft kompaniyasiga dasturiy ta'minotni ishlab chiqish va maslahat xizmatlarini berishim kerak?",
+    text:"Nima uchun men Hindistondagi Digital Soft kompaniyasiga dasturiy ta'minotni ishlab chiqish va maslahat xizmatlarini berishim kerak?"
+  },
+  {
+    title:"O’zbekistonga dasturiy ta'minotni ishlab chiqish uchun autsorsing qancha turadi?",
+    text:"O’zbekistonga dasturiy ta'minotni ishlab chiqish uchun autsorsing qancha turadi?"
+  },
+  {
+    title:"Men raqamli agentlikka egaman. Siz oq yorliqli dasturiy ta'minotni ishlab chiqish xizmatlarini taklif qilasizmi?",
+    text:"Men raqamli agentlikka egaman. Siz oq yorliqli dasturiy ta'minotni ishlab chiqish xizmatlarini taklif qilasizmi?"
+  },
+  {
+    title:"Biz startapmiz. Siz mijozlar bilan byudjet asosida ishlaysizmi?",
+    text:"Biz startapmiz. Siz mijozlar bilan byudjet asosida ishlaysizmi?"
+  },
+  {
+    title:"Siz pulni qaytarib berish yoki pulni qaytarish kafolatini taklif qilasizmi?",
+    text:"Siz pulni qaytarib berish yoki pulni qaytarish kafolatini taklif qilasizmi?"
+  },
+  {
+    title:"Dasturiy ta'minotni ishlab chiqishni autsorsing qilish xavflimi? IP (intellektual mulk) va ma'lumotlar himoyasini qanday ta'minlaysiz?",
+    text:"Dasturiy ta'minotni ishlab chiqishni autsorsing qilish xavflimi? IP (intellektual mulk) va ma'lumotlar himoyasini qanday ta'minlaysiz?"
+  },
+  {
+    title:"Men dasturiy ta'minotni ishlab chiqishni autsorsing qilmoqchiman. Qanday jalb qilish variantlarini taklif qilasiz?",
+    text:"Men dasturiy ta'minotni ishlab chiqishni autsorsing qilmoqchiman. Qanday jalb qilish variantlarini taklif qilasiz?"
+  },
+  {
+    title:"Nima uchun men frilanser yoki mustaqil platformani tanlashdan ko'ra kompaniyaga autsorsing qilishim kerak?",
+    text:"Nima uchun men frilanser yoki mustaqil platformani tanlashdan ko'ra kompaniyaga autsorsing qilishim kerak?"
+  },
+]
+export const dataHamkorlik = [
+  {img: imgH1},
+  {img: imgH2},
+  {img: imgH3},
+  {img: imgH4},
 ]

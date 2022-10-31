@@ -1,1 +1,204 @@
-/* No CSS */
+.progects__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  padding-top: 80px;
+  background: #3A1163;
+}
+
+.progects__container .h2__title {
+  max-width: 1300px;
+  margin-bottom: 35px;
+}
+
+.progects__container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.progects__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (400px)[2];
+      grid-template-rows: repeat(2, 400px);
+  max-width: 1920px;
+}
+
+.progects__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 30px 20px 30px;
+  position: relative;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.progects__item p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+.progects__item span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.progects__item a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.progects__item a svg {
+  margin-left: 15px;
+}
+
+.progects__item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(63.02%, rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 63.02%);
+}
+
+.progects__item__description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.progects__item__techs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.progects__item__techs img {
+  height: 27px;
+}
+
+.p__tech__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 3px;
+}
+
+@media (max-width: 1440px) {
+  .progects__item p {
+    font-size: 22px;
+  }
+  .progects__item span, .progects__item a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .progects__content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (400px)[3];
+        grid-template-rows: repeat(3, 400px);
+  }
+}
+
+@media (max-width: 768px) {
+  .progects__content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (370px)[6];
+        grid-template-rows: repeat(6, 370px);
+  }
+  .progects__container {
+    margin-top: 70px;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .progects__container {
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+  .progects__content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .progects__content span, .progects__content a {
+    font-size: 15px;
+  }
+  .progects__content a {
+    margin-top: 20px;
+  }
+  .progects__item {
+    padding: 30px 10px 20px 10px;
+  }
+}

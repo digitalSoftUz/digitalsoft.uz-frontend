@@ -1,1 +1,48 @@
-/* No CSS */
+.hamkorlik {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.hamkorlik .h1__title {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.hamkorlik .h2__title {
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.hamkorlik__left {
+  padding-bottom: 20px;
+}
+
+.hamkorlik__left a {
+  background: #0066FF;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 5px;
+  padding: 15px 35px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.hamkorlik__right {
+  position: relative;
+}
+
+#tsparticlesMap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}

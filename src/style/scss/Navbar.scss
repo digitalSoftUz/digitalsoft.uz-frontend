@@ -194,21 +194,34 @@
     display: block;
   }
 }
+@media (max-width:768px) {
+  .logo{
+    svg{
+      height: 40px;
+    }
+    p{
+      font-size: 18px;
+      margin-left: 0px;
+    }
+  }
+  .navbar__fixed{
+    height: 75px;
+  }
+}
 @media (max-width:425px) {
   .burger__close{
     transform: translateX(10px) translateY(-10px);
   }
   .navbar__fixed{
-    height: 80px;
+    height: 70px;
   }
   .logo{
     svg{
       height: 40px;
     }
     p{
-      font-size: 20px;
-      margin-left: 0;
-      line-height: 21px;
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 }

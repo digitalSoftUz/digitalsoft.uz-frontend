@@ -27,7 +27,7 @@ const Xizmatlar = () => {
                   <img src={item.img} alt="" />
                 </div>
                 <p>{item.description}</p>
-                <a href="/">Ko'proq ma'lumot olish <ArrowLeft/></a>
+                <a href="/">Ko'proq ma'lumot olish <ArrowLeft fill={"#0066FF"}/></a>
               </div>
             )
           })}

@@ -30,6 +30,9 @@ const Texnologiyalar = () => {
             )
           })}
         </div>
+        <div className='contact__link'>
+          <a href="/">Biz bilan bog’lanish</a>
+        </div>
       </div>
     </React.Fragment>
   )
