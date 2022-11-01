@@ -1,6 +1,8 @@
 import React from 'react';
-import ParticleMap from '../../../components/Particles/ParticleMap';
+// import ParticleMap from '../../../components/Particles/ParticleMap';
 import { dataHamkorlik } from '../../../data/data';
+// import { UzMap } from '../../../assets/icons';
+import Map from "../../../assets/images/map.png"
 
 const Hamkorlik = () => {
   return (
@@ -14,6 +16,16 @@ const Hamkorlik = () => {
         </div>
         <div className="hamkorlik__right">
           {/* <ParticleMap data={dataHamkorlik}/> */}
+          <div className="uzb__map">
+            <img src={Map} alt="" />
+          </div>
+          {dataHamkorlik?.map((item, index)=>{
+            return(
+              <div className="map__circle" style={{"--i":`${index}`, "--l":`${dataHamkorlik.length}`}} key={index}>
+                <img src={item.img} alt="" />
+              </div>
+            )
+          })}
         </div>
       </div>
     </React.Fragment>

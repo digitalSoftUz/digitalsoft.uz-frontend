@@ -5,7 +5,6 @@ import Footer from "./views/Footer"
 import Mode from './context/context';
 import { DS } from './context/context';
 import { Routes, Route } from 'react-router-dom';
-import Flame from './components/Flame/Flame';
 
 import 'antd/dist/antd.min.css'
 
@@ -20,7 +19,6 @@ const App = () => {
               <Routes>
                 <Route path='/' index element={<Home />} />
                 <Route path='*' element={<h1>404</h1>} />
-                <Route path='flame' element={<Flame/>} />
               </Routes>
               <Footer/>
             </React.Fragment>

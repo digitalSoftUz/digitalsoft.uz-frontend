@@ -16,19 +16,19 @@ import Comments from './Comments/Comments'
 const Home = () => {
   return (
     <React.Fragment>
-      <Header/> {/* tayyor */}
-      <Partnyors/> {/* tayyor */}
-      <Xizmatlar/> {/* tayyor */}
-      <Jarayon/> {/* tayyor */}
-      <Jamoa/> {/* tayyor */}
-      <Hamkorlik/> {/*  */}
-      <Boshlash/> {/* tayyor */}
-      <Texnologiyalar/> {/* tayyor */}
-      <Xizmat/> {/* tayyor */}
-      <Progects/> {/* tayyor */}
-      <Comments/> {/* tayyor */}
-      <Savollar/> {/* tayyor */}
-      <Contact/> {/* tayyor */}
+      <Header/>
+      <Partnyors/>
+      <Xizmatlar/>
+      <Jarayon/>
+      <Jamoa/>
+      <Hamkorlik/>
+      <Boshlash/>
+      <Texnologiyalar/>
+      <Xizmat/>
+      <Progects/>
+      <Comments/>
+      <Savollar/>
+      <Contact/>
     </React.Fragment>
   )
 }

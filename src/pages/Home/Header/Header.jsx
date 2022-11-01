@@ -4,14 +4,14 @@ import React from 'react';
 import { LogoHeader } from '../../../assets/icons';
 import Sphere from "../../../assets/images/sphere.png"
 import ParticleChars from '../../../components/Particles/Particles';
-import ParticleChars2 from '../../../components/Particles/Particles2';
+// import ParticleChars2 from '../../../components/Particles/Particles2';
 
 const Header = () => {
   return (
     <React.Fragment>
       <div className="header">
         <ParticleChars/>
-        <ParticleChars2/>
+        {/* <ParticleChars2/> */}
         <div className="header__container">
           <div className="header__left">
             <h1>Digital Soft raqamli kelajak sari qadam.</h1>

@@ -500,7 +500,7 @@ export const dataSavol = [
 ]
 export const dataHamkorlik = [
   {img: imgH1},
-  {img: imgH2},
   {img: imgH3},
   {img: imgH4},
+  {img: imgH2},
 ]
