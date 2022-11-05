@@ -24,6 +24,9 @@
     font-size: 18px;
     line-height: 21px;
     color: rgba(255, 255, 255, 0.9);
+    &:hover{
+      color: #40a9ff;
+    }
   }
   .nav{
     display: flex;
@@ -192,6 +195,10 @@
   }
   .nav__opened{
     display: block;
+  }
+  #blur__off{
+    backdrop-filter: none !important;
+    transition: 0s;
   }
 }
 @media (max-width:768px) {

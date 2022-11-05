@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Messages;
+  src: url(../../assets/fonts/Messages.ttf);
+}
 .xizmatlar__top{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,6 +24,12 @@
     line-height: 37px;
     color: #FFFFFF;
   }
+}
+.b_xizmatlar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
 }
 .x__video{
   display: flex;
@@ -84,6 +94,38 @@
     svg{
       margin-left: 10px;
     }
+  }
+}
+.b_xizmatlar__item{
+  background: #3A1163;
+  border-radius: 10px;
+  div{
+    justify-content: space-between;
+  }
+  h1{
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+  h2{
+    font-family: Messages;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 104px;
+    text-align: right;
+    color: #0066FF;
+  }
+  p{
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #CEB3DB;
   }
 }
 @media (max-width:1440px) {
@@ -155,6 +197,12 @@
       line-height: 28px;
     }
   }
+  .b_xizmatlar__item{
+    h2{
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
 }
 @media (max-width:500px) {
   .x__video{
@@ -177,6 +225,12 @@
   .x__video{
     video{
       padding: 10px;
+    }
+  }
+  .b_xizmatlar__item{
+    h2{
+      font-size: 50px;
+      line-height: 60px;
     }
   }
 }
@@ -209,6 +263,12 @@
     }
     p, a{
       font-size: 14px;
+    }
+  }
+  .b_xizmatlar__item{
+    h2{
+      font-size: 45px;
+      line-height: 50px;
     }
   }
 }

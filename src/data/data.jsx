@@ -504,3 +504,29 @@ export const dataHamkorlik = [
   {img: imgH4},
   {img: imgH2},
 ]
+export const dataBXizmatlar = [
+  {
+    title:"Mahsulot g'oyasi va konsalting",
+    description:"Bizning biznes-tahlilchilar, mahsulot muhandislari va UX ekspertlaridan iborat jamoamiz sizning g'oyangizning amalga oshirilishini tasdiqlash, prototip yaratish, texnologiya to'plamini sozlash va real bozor ma'lumotlari asosida kelajak rivojlanish istiqbollarini belgilashda yordam beradi."
+  },
+  {
+    title:"UI/UX dizayni",
+    description:"Biz mahsulot UI/UX qarorlarini maqsadli auditoriyangizning xatti-harakatlari, ehtiyojlari va muammolarini tushunish uchun keng qamrovli tadqiqotlarga asoslaymiz. Shunga asoslanib, biz esda qolarli tajribalar yaratish va taklifingizni aniq tushunish uchun diqqatni tortadigan, intuitiv interfeyslarni ishlab chiqamiz."
+  },
+  {
+    title:"MVP ishlab chiqish",
+    description:"Biz sizning g'oyangizni funktsional prototipga aylantirish uchun sizning oxirigacha hamkoringiz bo'lamiz. Loyiha rejasini yaratganimizdan so'ng, biz kontseptsiyani isbotlashni ishlab chiqamiz, foydalanuvchilarning fikr-mulohazalari asosida xususiyatlarni birinchi o'ringa qo'yamiz va resurslar sarfini minimal darajada ushlab turganda sifat kafolatini ta'minlaymiz."
+  },
+  {
+    title:"SaaS rivojlanishi",
+    description:"Bulutga asoslangan ilovalardagi tajribamiz bizni SaaS mahsulotlarini ishlab chiqish xizmatlarining yetakchi provayderiga aylantiradi. Siz startap yoki tashkil etilgan korxona bo'lasizmi, biz sizning SaaS dasturiy ta'minotini ishlab chiqish bo'yicha sayohatingizga qo'shilishga tayyormiz, kontseptualizatsiyadan tortib, joylashtirishdan keyingi texnik xizmat ko'rsatishgacha."
+  },
+  {
+    title:"QA va sinov",
+    description:"Biz sizning dasturiy ta'minotingizni muntazam va eng yuqori yuklanishlarda xavfsizlikning eng yuqori darajasini va barqaror ishlashini ta'minlash uchun qattiq sinovdan o'tkazamiz. Bizning mutaxassislarimiz qo'lda va avtomatik sinov xizmatlarini bilishadi."
+  },
+  {
+    title:"Migratsiya va yangilash",
+    description:"Mutaxassislarimiz mahalliy yechimingizni SaaS muhitiga qayta arxitektura qilishi yoki mavjud SaaS ilovangizni unumdorlikni pasaytirish xavfisiz boshqa texnologiyaga o‘tkazishi mumkin. Biz koʻchirilgan ilovaning oʻrnatilgan biznes jarayonlaringiz orqasidagi tizimlar bilan yaxshi integratsiyalanganligini taʼminlaymiz."
+  },
+]

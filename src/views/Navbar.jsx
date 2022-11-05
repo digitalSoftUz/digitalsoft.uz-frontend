@@ -75,7 +75,10 @@ const Navbar = () => {
     <DS.Consumer>
       {(x)=>{
         return(
-          <div className={x.scroll > 100 ? "navbar__fixed nav__scrolled" : "navbar__fixed"}>
+          <div 
+            className={x.scroll > 100 ? "navbar__fixed nav__scrolled" : "navbar__fixed"}
+            id={burger ? "" : "blur__off"}
+          >
             <div className="navbar container">
               <a href='/' className="logo">
                 <Logo/>
@@ -92,7 +95,7 @@ const Navbar = () => {
               <nav className={burger ? 'nav' : 'nav nav__show'}>
                 <div onClick={HandleBurger} className={burger ? "nav__close" : "nav__close nav__opened"}></div>
                 <Dropdown overlay={menu1} placement="bottom" arrow>
-                  <Button type='link'>Xizmatlar</Button>
+                  <a href='xizmatlar' type='link'>Xizmatlar</a>
                 </Dropdown>
                 <Dropdown overlay={menu2} placement="bottom" arrow>
                   <Button type='link'>Raqamlashtirish</Button>

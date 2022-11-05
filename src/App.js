@@ -5,6 +5,8 @@ import Footer from "./views/Footer"
 import Mode from './context/context';
 import { DS } from './context/context';
 import { Routes, Route } from 'react-router-dom';
+import NoMatch from './components/NoMatch/NoMatch';
+import Xizmatlar from './pages/Xizmatlar/Xizmatlar';
 
 import 'antd/dist/antd.min.css'
 
@@ -18,7 +20,8 @@ const App = () => {
               <Navbar/>
               <Routes>
                 <Route path='/' index element={<Home />} />
-                <Route path='*' element={<h1>404</h1>} />
+                <Route path='*' element={<NoMatch/>} />
+                <Route path='xizmatlar' element={<Xizmatlar/>} />
               </Routes>
               <Footer/>
             </React.Fragment>

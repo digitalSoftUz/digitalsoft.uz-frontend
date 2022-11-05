@@ -133,6 +133,7 @@
   margin-bottom: 30px;
   width: 220px;
   height: 45px;
+  cursor: pointer;
 }
 
 .contact__form form {
@@ -147,6 +148,24 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
+}
+
+.contact__form p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.contact__form span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #CEB3DB;
 }
 
 .inp {

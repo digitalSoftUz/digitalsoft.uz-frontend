@@ -21,9 +21,6 @@ body {
 html{
   scroll-behavior: smooth;
 }
-body{
-  background: #5A048E;
-}
 body::-webkit-scrollbar {
   width: 0.4em;
   height: 0;
@@ -38,6 +35,9 @@ body::-webkit-scrollbar-thumb {
 }
 #root{
   overflow: hidden;
+  background: 
+    linear-gradient(to bottom, #5A048E, #5D0274 , #32063D )
+  ;
 }
 a{
   text-decoration: none;
@@ -71,6 +71,40 @@ p, h1, h2, h3, h4, h5, h6{
   max-width: 1100px;
   margin-bottom: 70px;
 }
+.x__title{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 51px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  max-width: 1300px;
+}
+.x__subtitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 70px;
+  max-width: 1300px;
+}
+.xizmatlar__page .h1__title{
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+}
+.xizmatlar__page .h2__title{
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: #CEB3DB;
+}
 @media (max-width:1600px) {
   .container,.header__container{
     padding: 0 100px;
@@ -98,6 +132,16 @@ p, h1, h2, h3, h4, h5, h6{
     font-size: 22px;
     line-height: 28px;
   }
+  .x__title{
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+  .x__subtitle{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 50px;
+  }
 }
 @media (max-width:768px) {
   .h1__title{
@@ -107,6 +151,14 @@ p, h1, h2, h3, h4, h5, h6{
   .h2__title{
     font-size: 20px;
     line-height: 28px;
+  }
+  .x__title{
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .x__subtitle{
+    font-size: 26px;
+    line-height: 30px;
   }
 }
 @media (max-width:425px) {
@@ -123,6 +175,14 @@ p, h1, h2, h3, h4, h5, h6{
     line-height: 24px;
     margin-bottom: 35px;
   }
+  .x__title{
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .x__subtitle{
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 @media (max-width:375px) {
   .h1__title{
@@ -131,6 +191,14 @@ p, h1, h2, h3, h4, h5, h6{
   }
   .h2__title{
     font-size: 16px;
+    line-height: 23px;
+  }
+  .x__title{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .x__subtitle{
+    font-size: 18px;
     line-height: 23px;
   }
 }
