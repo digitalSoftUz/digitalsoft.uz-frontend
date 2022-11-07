@@ -1,17 +1,13 @@
 import React from 'react';
-// import Header3D from '../../../components/Header3D/Header3D';
-// import Marble3D from '../../../components/3dMarblr/marble';
 import { LogoHeader } from '../../../assets/icons';
-import Sphere from "../../../assets/images/sphere.png"
-import ParticleChars from '../../../components/Particles/Particles';
-// import ParticleChars2 from '../../../components/Particles/Particles2';
+import Sphere from "../../../assets/images/sphere.webp"
+import ParticleHeader from '../../../components/Particles/ParticlesHeader';
 
 const Header = () => {
   return (
     <React.Fragment>
       <div className="header">
-        <ParticleChars/>
-        {/* <ParticleChars2/> */}
+        <ParticleHeader/>
         <div className="header__container">
           <div className="header__left">
             <h1>Digital Soft raqamli kelajak sari qadam.</h1>

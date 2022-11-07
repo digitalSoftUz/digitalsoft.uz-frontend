@@ -6,7 +6,7 @@ const { Panel } = Collapse;
 
 const Savollar = () => {
   const onChange = (key: string | string[]) => {
-    console.log(key);
+    // console.log(key);
   };
   return (
     <React.Fragment>

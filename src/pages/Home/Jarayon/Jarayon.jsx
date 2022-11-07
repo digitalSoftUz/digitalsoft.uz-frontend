@@ -1,6 +1,6 @@
 import React from 'react';
 import Polygon from '../../../components/Particles/Polygon';
-import Jarayon_img from "../../../assets/images/jarayon.png"
+import Jarayon_img from "../../../assets/images/jarayon.webp"
 
 const Jarayon = () => {
   return (

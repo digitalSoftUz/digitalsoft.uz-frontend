@@ -98,7 +98,7 @@
 }
 
 .contact__form {
-  background: url(../../assets/images/contact.png);
+  background: url(../../assets/images/contact.webp);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -361,6 +361,12 @@
   .contact__info span {
     font-size: 14.5px;
     line-height: 20px;
+  }
+  .contact__form form {
+    margin-top: 20px;
+  }
+  .contact__form p {
+    margin-top: 20px;
   }
   .contact_steps::before {
     left: 17.5px;

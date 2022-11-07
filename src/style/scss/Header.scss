@@ -2,7 +2,10 @@
   // background: red;
   z-index: 2;
   padding-top: 110px;
-  background: url(../../assets/images/Header_bg.webp);
+  background: 
+    linear-gradient(-45deg, #33005B 0%, #34005b62 46.88%, #4b00859f 100%),
+    url(../../assets/images/Header_bg.webp)
+  ;
   background-position: center;
   background-size: cover;
   // height: calc(100vh - 110px);
@@ -387,7 +390,8 @@
     }
   }
   .header{
-    height: 670px;
+    height: auto;
+    padding: 100px 0;
   }
 }
 @media (max-width:425px) {
@@ -395,7 +399,7 @@
     padding: 0 10px;
   }
   .header{
-    height: 810px;
+    padding: 85px 0 50px 0;
   }
   .header__xizmatlar{
     padding-top: 80px;
@@ -417,7 +421,7 @@
 }
 @media (max-width:375px) {
   .header{
-    height: 710px;
+    padding: 85px 0 30px 0;
   }
   .header__left{
     h1{
@@ -450,9 +454,6 @@
   }
 }
 @media (max-width:320px) {
-  .header{
-    height: 610px;
-  }
   .header__left{
     h1{
       font-size: 30px;

@@ -1,8 +1,6 @@
 import React from 'react';
-// import ParticleMap from '../../../components/Particles/ParticleMap';
 import { dataHamkorlik } from '../../../data/data';
-// import { UzMap } from '../../../assets/icons';
-import Map from "../../../assets/images/map.png"
+import Map from "../../../assets/images/map.webp"
 
 const Hamkorlik = () => {
   return (
@@ -15,7 +13,6 @@ const Hamkorlik = () => {
           <a href="/">Biz bilan bog’laning</a>
         </div>
         <div className="hamkorlik__right">
-          {/* <ParticleMap data={dataHamkorlik}/> */}
           <div className="uzb__map">
             <img src={Map} alt="" />
           </div>

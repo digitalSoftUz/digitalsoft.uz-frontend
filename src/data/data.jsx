@@ -530,3 +530,18 @@ export const dataBXizmatlar = [
     description:"Mutaxassislarimiz mahalliy yechimingizni SaaS muhitiga qayta arxitektura qilishi yoki mavjud SaaS ilovangizni unumdorlikni pasaytirish xavfisiz boshqa texnologiyaga o‘tkazishi mumkin. Biz koʻchirilgan ilovaning oʻrnatilgan biznes jarayonlaringiz orqasidagi tizimlar bilan yaxshi integratsiyalanganligini taʼminlaymiz."
   },
 ]
+export const dataInfo1 = [
+  {title:"IP huquqlarini himoya qilish"},
+  {title:"Davom etayotgan ichki L&D dasturlari"},
+  {title:"Tejamkor yechimlar"},
+  {title:"Kundalik/haftalik/oylik hisobot"},
+  {title:"Samarali aloqa"},
+  {title:"Shaffoflik va javobgarlik"},
+  {title:"Moslashuvchan ulanish imkoniyatlari"},
+]
+export const dataInfo2 = [
+  {title:"Mijozlarning o'rtacha qoniqish darajasi 91,2%"},
+  {title:"Sinfdagi eng yaxshi loyiha boshqaruvi"},
+  {title:"Global sifat standartlari"},
+  {title:"Vaqt mintaqasining muvofiqligi"},
+]
