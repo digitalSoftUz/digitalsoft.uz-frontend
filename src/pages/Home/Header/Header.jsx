@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <div className="header">
-        <ParticleHeader/>
+        {/* <ParticleHeader/> */}
         <div className="header__container">
           <div className="header__left">
             <h1>Digital Soft raqamli kelajak sari qadam.</h1>
@@ -19,7 +19,7 @@ const Header = () => {
           <div className="header__right">
             <div className="sphere__header">
               <img src={Sphere} alt="" />
-              <div className="circle"></div>
+              {/* <div className="circle"></div>
               <svg className='flame__svg'>
                 <filter id='wavy'>
                   <feTurbulence x="0" y="0"  baseFrequency="0.009" numOctaves="5" seed="2">
@@ -32,7 +32,7 @@ const Header = () => {
                   </feTurbulence>
                   <feDisplacementMap in='SourceGraphic' scale="30"/>
                 </filter>
-              </svg>
+              </svg> */}
             </div>
             <LogoHeader/>
           </div>
