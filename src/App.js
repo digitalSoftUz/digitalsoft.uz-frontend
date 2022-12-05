@@ -1,14 +1,22 @@
 import React from 'react';
-import Home from './pages/Home/Home';
+import Footer from "./views/Footer";
 import Navbar from './views/Navbar';
-import Footer from "./views/Footer"
 import Mode from './context/context';
+import Home from './pages/Home/Home';
 import { DS } from './context/context';
+// import HomePage from './pages/HomePage/HomePage';
 import { Routes, Route } from 'react-router-dom';
 import NoMatch from './components/NoMatch/NoMatch';
 import Xizmatlar from './pages/Xizmatlar/Xizmatlar';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Vakansiya from './pages/Vakansiya/Vakansiya';
+import Demo from './pages/demo/demo';
 
-import 'antd/dist/antd.min.css'
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/pagination";
+import 'antd/dist/antd.min.css';
+// import "./style/scss/_IMPORT.scss";
 
 const App = () => {
   return ( 
@@ -21,7 +29,11 @@ const App = () => {
               <Routes>
                 <Route path='/' index element={<Home />} />
                 <Route path='*' element={<NoMatch/>} />
-                <Route path='xizmatlar' element={<Xizmatlar/>} />
+                {/* <Route path='home' element={<HomePage/>} /> */}
+                <Route path='about' element={<Xizmatlar/>} />
+                <Route path='portfolio' element={<Portfolio/>} />
+                <Route path='vakansiya' element={<Vakansiya/>} />
+                <Route path='demo' element={<Demo/>} />
               </Routes>
               <Footer/>
             </React.Fragment>

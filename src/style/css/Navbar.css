@@ -140,6 +140,10 @@
   .logo svg {
     height: 50px;
   }
+  .logo img {
+    height: 70px;
+    margin-right: 5px;
+  }
   .logo p {
     font-size: 24px;
     line-height: 24px;
@@ -268,6 +272,9 @@
   .logo svg {
     height: 40px;
   }
+  .logo img {
+    height: 60px;
+  }
   .logo p {
     font-size: 18px;
     margin-left: 0px;
@@ -287,6 +294,9 @@
   }
   .logo svg {
     height: 40px;
+  }
+  .logo img {
+    height: 50px;
   }
   .logo p {
     font-size: 16px;

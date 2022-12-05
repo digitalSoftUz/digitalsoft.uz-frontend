@@ -12,6 +12,9 @@
 @import url(./Texnologiyalar.css);
 @import url(./Xizmat.css);
 @import url(./Comments.css);
+@import url(./Home.css);
+@import url(./Portfolio.css);
+@import url(./Vakansiya.css);
 
 .circle{
   position: relative;
@@ -76,9 +79,159 @@
   width: 0;
   height: 0;
 }
+.btn__animation{
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  /* background: #0066FF; */
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 60px;
+}
+.btn__animation::before{
+  content: "";
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+}
+.btn__animation span{
+  position: absolute;
+  display: block;
+}
+.btn__animation span:nth-child(1){
+  height: 3px;
+  width:240px;
+  top:0px;
+  left:-240px;
+  background: linear-gradient(to right, rgba(0,0,0,0), #138AE0);
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span1 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes span1{
+  0%{
+    left:-100%
+  }
+  100%{
+    left: 100%;
+  }
+}
+.btn__animation span:nth-child(2){
+  height: 70px;
+  width: 3px;
+  top:-70px;
+  right:0px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #138AE0);
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span2 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes span2{
+  0%{
+    top:-100%;
+  }
+  100%{
+    top:100%;
+  }
+}
+.btn__animation span:nth-child(3){
+  height:3px;
+  width:240px;
+  right:-240px;
+  bottom: 0px;
+  background: linear-gradient(to left, rgba(0,0,0,0), #138AE0);
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  animation: span3 2s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes span3{
+  0%{
+    right:-100%;
+  }
+  100%{
+    right: 100%;
+  }
+}
+
+.btn__animation span:nth-child(4){
+  height:70px;
+  width:3px;
+  bottom:-70px;
+  left:0px;
+  background: linear-gradient(to top, rgba(0,0,0,0), #138AE0);
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  animation: span4 2s linear infinite;
+  animation-delay: 4s;
+}
+@keyframes span4{
+  0%{
+    bottom: -100%;
+  }
+  100%{
+    bottom:100%;
+  }
+}
+
 @media (max-width:1024px) {
   .circle{
     width: 100%;
     height: 100%;
+  }
+  .btn__animation{
+    width: 220px;
+    height: 50px;
+    font-size: 17px;
+  }
+  .btn__animation span:nth-child(1){
+    width: 220px;
+  }
+  .btn__animation span:nth-child(2){
+    height: 50px;
+  }
+  .btn__animation span:nth-child(3){
+    width: 220px;
+  }
+  .btn__animation span:nth-child(4){
+    height: 50px;
+  }
+}
+@media (max-width:320px) {
+  .circle{
+    width: 100%;
+    height: 100%;
+  }
+  .btn__animation{
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .btn__animation span:nth-child(1){
+    width: 200px;
+  }
+  .btn__animation span:nth-child(2){
+    height: 40px;
+  }
+  .btn__animation span:nth-child(3){
+    width: 200px;
+  }
+  .btn__animation span:nth-child(4){
+    height: 40px;
   }
 }

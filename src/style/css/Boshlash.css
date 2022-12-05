@@ -1,5 +1,4 @@
 .info__block {
-  background: #3A1163;
   margin: 0 auto;
   margin-top: 80px;
   padding: 70px 0;
@@ -45,7 +44,6 @@
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  max-width: 1000px;
   width: 100%;
 }
 
@@ -192,7 +190,8 @@
     margin-bottom: 30px;
   }
   .info__item p {
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 25px;
   }
   .info__item span {
     font-size: 18px;
@@ -216,5 +215,13 @@
   .info__item {
     -ms-grid-columns: 1fr 1.6fr;
         grid-template-columns: 1fr 1.6fr;
+  }
+  .info__item p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .info__item span {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

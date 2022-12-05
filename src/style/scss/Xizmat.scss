@@ -36,6 +36,7 @@
   }
   img{
     height: 124px;
+    z-index: 1;
   }
   p{
     font-style: normal;
@@ -45,6 +46,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 20px;
+    z-index: 1;
   }
   span{
     font-style: normal;
@@ -54,6 +56,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 15px;
+    z-index: 1;
   }
   a{
     font-style: normal;
@@ -64,6 +67,7 @@
     color: #FFFFFF;
     display: flex;
     align-items: center;
+    z-index: 1;
     svg{
       margin-left: 15px;
     }
@@ -74,8 +78,7 @@
     width: 100%;
     height: 75%;
     bottom: 0;
-    z-index: -1;
-    background: #3A1163;
+    background: #1B003D;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
   }

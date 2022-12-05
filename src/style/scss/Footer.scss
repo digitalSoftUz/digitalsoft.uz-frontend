@@ -1,5 +1,5 @@
 .footer__container{
-  background: #200049;
+  background: #04031E;
   margin-top: 150px;
 }
 .footer{
@@ -7,6 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  &::before{
+    content: "";
+    width: calc(100% - 300px);
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 150px;
+  }
 }
 .dc_logo{
   display: flex;
@@ -25,6 +35,30 @@
   align-items: center;
   justify-content: space-between;
   flex-grow: 0.2;
+}
+@media (max-width:1600px) {
+  .footer{
+    &::before{
+      width: calc(100% - 200px);
+      left: 100px;
+    }
+  }
+}
+@media (max-width:1440px) {
+  .footer{
+    &::before{
+      width: calc(100% - 140px);
+      left: 70px;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .footer{
+    &::before{
+      width: calc(100% - 60px);
+      left: 30px;
+    }
+  }
 }
 @media (max-width:800px) {
   .footer{
@@ -70,6 +104,12 @@
 @media (max-width:425px) {
   .footer__container{
     margin-top: 80px;
+  }
+  .footer{
+    &::before{
+      width: calc(100% - 20px);
+      left: 10px;
+    }
   }
 }
 @media (max-width:375px) {

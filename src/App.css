@@ -18,34 +18,37 @@
   color: #32063D;
 }
 body{
-  background-color: #5A048E;
+  background-color: #04031E;
+  width: 100% !important;
+  /* overflow: visible !important; */
 }
 html{
   scroll-behavior: smooth;
 }
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0.4em;
-  height: 0;
+  height: 0 ;
 }
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px #3A1163;
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #04031E;
   background: rgba(255, 255, 255, 0.76);
 }
-body::-webkit-scrollbar-thumb {
-  background-color: #3A1163;
+*::-webkit-scrollbar-thumb {
+  background-color: #04031E;
   border-radius: 2px;
 }
 #root{
   overflow: hidden;
-  background: 
-    linear-gradient(to bottom, #5A048E, #5D0274 , #32063D )
-  ;
+  background: #04031E;
 }
 a{
   text-decoration: none;
 }
 p, h1, h2, h3, h4, h5, h6{
   margin-bottom: 0;
+}
+canvas{
+  background: none;
 }
 .container{
   max-width: 1920px;
@@ -62,6 +65,7 @@ p, h1, h2, h3, h4, h5, h6{
   text-align: center;
   max-width: 1100px;
   margin-bottom: 40px;
+  z-index: 1;
 }
 .h2__title{
   font-style: normal;
@@ -72,6 +76,7 @@ p, h1, h2, h3, h4, h5, h6{
   color: #CEB3DB;
   max-width: 1100px;
   margin-bottom: 70px;
+  z-index: 1;
 }
 .x__title{
   font-style: normal;
@@ -93,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6{
   margin-bottom: 70px;
   max-width: 1300px;
 }
-.xizmatlar__page .h1__title{
+/* .xizmatlar__page .h1__title{
   font-family: 'Play';
   font-style: normal;
   font-weight: 700;
@@ -106,7 +111,7 @@ p, h1, h2, h3, h4, h5, h6{
   font-weight: 400;
   text-align: center;
   color: #CEB3DB;
-}
+} */
 @media (max-width:1600px) {
   .container,.header__container{
     padding: 0 100px;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Check } from '../../../assets/icons';
-import { dataJamoa } from '../../../data/data';
+// import { Check } from '../../../assets/icons';
+import { dataInfo, dataJamoa } from '../../../data/data';
 
 const Jamoa = () => {
   return (
@@ -24,7 +24,20 @@ const Jamoa = () => {
             <p>
               Bizning korporativ missiyamizni shakllantirish oson, lekin bajarish qiyin. Biz IT yechimlarni yaratamiz. Mijozlarimiz bilan birgalikda biz dunyoni hamma uchun qulayroq va yaxshiroq joyga aylantiramiz.
             </p>
-            <span>
+            <div className="info__content">
+              {dataInfo?.map((item, index)=>{
+                return(
+                  <div className="info__item" key={index}>
+                    <div className="info__img">
+                      <img src={item.img} alt="" />
+                    </div>
+                    <p>{item.number}</p>
+                    <span>{item.title}</span>
+                  </div>
+                )
+              })}
+            </div>
+            {/* <span>
               <div>
                 <Check/>
               </div>
@@ -41,7 +54,7 @@ const Jamoa = () => {
                 <Check/>
               </div>
               Biz o'zimiz yoqtirgan narsani qilamiz va buni yaxshi qilamiz
-            </span>
+            </span> */}
           </div>
         </div>
       </div>

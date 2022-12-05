@@ -1,12 +1,164 @@
 .jamoa{
-  background: #3A1163;
+  // background: #3A1163;
   margin: 0 auto;
   padding: 100px 0;
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 .jamoa__container{
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  z-index: 2;
+}
+.jamoa__slider{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1920px;
+  padding: 0 0 0 150px;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+  .slider__container{
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-width: 2px 0 2px 2px;
+    border-radius: 50px 0px 0px 0px;
+    padding: 70px 10px 20px 45px;
+    z-index: 1;
+  }
+  &::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: #138AE0;
+    opacity: 0.3;
+    filter: blur(175px);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &::after{
+    content: "";
+    width: 40%;
+    height: 80%;
+    background: #6D13E0;
+    opacity: 0.3;
+    filter: blur(175px);
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+  }
+}
+.jamoa_Swiper{
+  height: 500px;
+  padding-bottom: 50px;
+  .team__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 35px 0 0 0;
+    transition: 0.5s;
+  }
+  .swiper-slide{
+    // background: white;
+    border-radius: 35px 0 0 0;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: -180px;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        0deg, #138be0 30%, transparent
+      );
+      transition: 0.5s;
+      z-index: 1;
+      // filter: blur(50px);
+    }
+    .div_name{
+      position: absolute;
+      bottom: 30px;
+      // transform: translateY(10px);
+      // opacity: 0;
+      transition: 0.5s;
+      z-index: 2;
+      p{
+        font-family: 'Alien Robot';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 2px #000;
+      }
+    }
+    
+    .team__skills{
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      img{
+        object-fit: cover;
+        max-height: 40px;
+        min-height: 40px;
+        margin: 0 5px;
+        transform: translateY(50px); 
+        object-fit: none;
+      }
+    }
+    &:hover{
+      .team__img{
+        transform: translateY(-10px);
+      }
+      .div_name{
+        transform: translateY(-40px);
+      }
+      &::before{
+        bottom: -100px;
+      }
+      .team__skills{
+        img{
+          transform: translateY(-20px);
+        }
+      }
+    }
+  }
+  .swiper-button-next{
+    top: auto;
+    bottom: 0;
+    left: 65px;
+    background: url(../../assets/icons/arrow_r.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    &::after{
+      display: none;
+    }
+  }
+  .swiper-button-prev{
+    top: auto;
+    bottom: 0;
+    left: 0px;
+    background: url(../../assets/icons/arrow_l.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    &::after{
+      display: none;
+    }
+  }
 }
 .info{
   .jamoa__info{
@@ -78,6 +230,7 @@
   grid-area: I2;
 }
 .jamoa__info{
+  z-index: 2;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -133,6 +286,30 @@
       z-index: 1;
     }
   }
+  .info__content{
+    margin-top: 50px;
+  }
+  .info__img{
+    width: 150px;
+    height: 100px;
+    margin-bottom: 0;
+    img{
+      height: 100%;
+    }
+  }
+  .info__item{
+    p{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    span{
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 @keyframes check_svg {
   from{
@@ -156,6 +333,7 @@
   ;
   grid-gap: 20px;
   transition: 0.4s linear;
+  z-index: 2;
 }
 .jamoa__image{
   width: 100%;
@@ -251,6 +429,16 @@
     }
   }
 }
+@media (max-width:1600px) {
+  .jamoa__slider{
+    padding: 0 0 0 100px;
+  }
+}
+@media (max-width:1440px) {
+  .jamoa__slider{
+    padding: 0 0 0 70px;
+  }
+}
 @media (max-width:1200px) {
   .info__bot{
     margin-left: 30px;
@@ -274,8 +462,11 @@
     margin-left: 0;
   }
   .jamoa{
-    margin-top: 70px;
+    // margin-top: 70px;
     padding: 70px 0;
+  }
+  .jamoa__slider{
+    padding:0 0 0 30px;
   }
 }
 @media (max-width:990px) {
@@ -296,6 +487,21 @@
     grid-template-rows: 600px;
     grid-template-areas: "I1 I2";
     margin-top: 30px;
+  }
+  .jamoa__slider{
+    // padding: 0 0 0 70px;
+    padding: 0 30px;
+    .slider__container{
+      border-width: 2px 0 2px 0;
+      border-radius: 0;
+      padding: 50px 0 10px 0;
+    }
+  }
+  .jamoa_Swiper{
+    border-radius: 0;
+    img{
+      border-radius: 0;
+    }
   }
 }
 @media (max-width:768px) {
@@ -353,6 +559,17 @@
     grid-template-rows: 400px;
   }
 }
+@media (max-width:480px) {
+  .jamoa__info{
+    .info__item{
+      grid-template-columns: 1fr 1.5fr;
+    }
+    .info__content{
+      grid-gap: 10px;
+      grid-template-rows: repeat(4, 100px);
+    }
+  }
+}
 @media (max-width:425px) {
   .jamoa__galery{
     grid-template-columns: 1fr 1fr 1.4fr;
@@ -373,6 +590,9 @@
   .i_t__right{
     grid-gap: 10px;
   }
+  .jamoa_Swiper{
+    height: 450px;
+  }
 }
 @media (max-width:375px) {
   .jamoa__galery{
@@ -392,7 +612,7 @@
     }
   }
   .jamoa{
-    margin-top: 50px;
+    // margin-top: 50px;
     padding: 30px 0;
   }
   .info{
@@ -413,5 +633,8 @@
     // grid-template-columns: 1fr;
     // grid-template-areas: "I1""I2";
     grid-template-rows: repeat(1, 250px);
+  }
+  .jamoa_Swiper{
+    height: 400px;
   }
 }

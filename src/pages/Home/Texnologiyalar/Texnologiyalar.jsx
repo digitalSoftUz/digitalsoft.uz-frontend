@@ -4,7 +4,7 @@ import { dataTech } from '../../../data/data';
 const Texnologiyalar = () => {
   return (
     <React.Fragment>
-      <div className="texnologiyalat container">
+      <div className="texnologiyalar container">
         <h1 className='h1__title'>Texnologiyalar</h1>
         <h2 className='h2__title'>
           DigitalSoftda dasturiy ta'minotni ishlab chiqish va autsorsing ehtiyojlarini qondirish uchun barcha talab qilinadigan texnologiyalar va platformalar bo'yicha tajribamiz bilan qidirayotgan narsangizni oling.
@@ -31,7 +31,13 @@ const Texnologiyalar = () => {
           })}
         </div>
         <div className='contact__link'>
-          <a href="/">Biz bilan bog’lanish</a>
+          <a href="#Contact"  className="btn__animation">
+            Biz bilan bog’laning
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
         </div>
       </div>
     </React.Fragment>
