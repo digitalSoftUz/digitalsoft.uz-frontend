@@ -24,8 +24,10 @@
     font-size: 18px;
     line-height: 21px;
     color: rgba(255, 255, 255, 0.9);
+    transition: 0.2s linear;
     &:hover{
       color: #40a9ff;
+      transform: scale(1.03);
     }
   }
   .nav{
@@ -61,17 +63,30 @@
 .burger__btn{
   display: none;
 }
+.uz__active, .ru__active, .en__active{
+  display: none;
+}
 .nav__dropdown{
   background: rgba(43, 2, 57, 0.7);
   backdrop-filter: blur(2px);
   border-radius: 5px;
   border: 1px solid #FFFFFF;
+  padding: 0;
   li{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: #FFFFFF;
+    padding: 0;
+    .ant-dropdown-menu-title-content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button{
+      width: 100%;
+    }
   }
   a:hover{
     color: black;

@@ -2,16 +2,22 @@ import React from 'react';
 import Header from './Header/Header';
 import Slider from './Slider/Slider';
 import Contact from '../../views/Contact';
+import { DS } from '../../context/context';
 
 const Portfolio = () => {
   return (
-    <React.Fragment>
-      <div className="portfolio__page">
-        <Header/>
-        <Slider/>
-        <Contact/>
-      </div>
-    </React.Fragment>
+    <DS.Consumer>
+      {(x)=>{
+        return(
+          <div className="portfolio__page">
+            <Header/>
+            <Slider data={x.homeData}/> {/* tayyor */}
+            <Contact/>
+          </div>
+        )
+      }}
+      
+    </DS.Consumer>
   )
 }
 

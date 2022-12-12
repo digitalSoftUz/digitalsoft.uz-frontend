@@ -1,60 +1,43 @@
 import React from 'react';
+import { BaseUrl } from '../../../contans';
 // import { Check } from '../../../assets/icons';
-import { dataInfo, dataJamoa } from '../../../data/data';
+// import { dataInfo, dataJamoa } from '../../../data/data';
+import i18next from 'i18next';
 
-const Jamoa = () => {
+const Jamoa = (props) => {
+  var til = i18next.language
+  var data = props.data.mainAboutUs
+  var dataImg = props.data.mainAboutUsImages
+  var dataInfo = props.data.mainAboutUsStatistics
   return (
     <React.Fragment>
       <div className="jamoa">
         <div className="jamoa__container container">
           <div className="jamoa__galery">
-            {dataJamoa?.map((item, index)=>{
+            {dataImg?.map((item, index)=>{
               return(
                 <div className="jamoa__image" key={index}>
-                  <img src={item.img} alt="" />
+                  <img src={BaseUrl+item.image} alt="" />
                 </div>
               )
             })}
           </div>
           <div className="jamoa__info">
-            <h1>DigitalSoft - raqamli kelajak sari qadam</h1>
-            <p>
-              DigitalSoft nafaqat dasturiy ta'minot ishlab chiqaruvchi kompaniya, balki raqamli innovatsiyalar orqali dunyoni o'zgartirishga intilayotgan yuqori darajadagi muhandislarning do'stona hamjamiyatidir. Barcha ko'nikmalarimiz, bilimlarimiz va tajribamizdan foydalanib, biz mijozlarimizga yangi cho'qqilarni zabt etishda va dunyoni biroz yaxshiroq qilishda yordam beramiz.
-            </p>
-            <p>
-              Bizning korporativ missiyamizni shakllantirish oson, lekin bajarish qiyin. Biz IT yechimlarni yaratamiz. Mijozlarimiz bilan birgalikda biz dunyoni hamma uchun qulayroq va yaxshiroq joyga aylantiramiz.
-            </p>
+            <h1>{data?.[`title_${til}`]}</h1>
+            <p>{data?.[`text_${til}`]}</p>
             <div className="info__content">
               {dataInfo?.map((item, index)=>{
                 return(
                   <div className="info__item" key={index}>
                     <div className="info__img">
-                      <img src={item.img} alt="" />
+                      <img src={BaseUrl+item.icon} alt="" />
                     </div>
-                    <p>{item.number}</p>
-                    <span>{item.title}</span>
+                    <p>{item[`subtitle_${til}`]}</p>
+                    <span>{item[`title_${til}`]}</span>
                   </div>
                 )
               })}
             </div>
-            {/* <span>
-              <div>
-                <Check/>
-              </div>
-              Biz jamoamiz bilan faxrlanamiz va doimo rivojlanib boramiz
-            </span>
-            <span>
-              <div>
-                <Check/>
-              </div>
-              Moslashuvchan va ochiq ishlasak, kerakli natijalarga erishamiz
-            </span>
-            <span>
-              <div>
-                <Check/>
-              </div>
-              Biz o'zimiz yoqtirgan narsani qilamiz va buni yaxshi qilamiz
-            </span> */}
           </div>
         </div>
       </div>

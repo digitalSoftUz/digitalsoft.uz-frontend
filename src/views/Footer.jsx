@@ -1,8 +1,11 @@
 import React from 'react';
-import { Logo, Telegram, Facebook, Instagram, Youtube } from '../assets/icons';
+import i18next from 'i18next';
 import dc_logo from "../assets/images/DC_logo.png"
+import { Logo, Telegram, Facebook, Instagram, Youtube } from '../assets/icons';
 
-const Footer = () => {
+const Footer = (props) => {
+  var data = props.data
+  var til = i18next.language
   return (
     <React.Fragment>
       <div className="footer__container">
@@ -16,12 +19,6 @@ const Footer = () => {
               </div>
             </a>
           </div>
-          <div className="footer__center">
-            <a href="/"><Facebook/></a>
-            <a href="/"><Telegram/></a>
-            <a href="/"><Instagram/></a>
-            <a href="/"><Youtube/></a>
-          </div>
           <div className="footer__right">
             <a href='/' className="dc_logo">
               <img src={dc_logo} alt="" />
@@ -30,6 +27,16 @@ const Footer = () => {
                 <p>CITY</p>
               </div>
             </a>
+          </div>
+          <div className="footer__center">
+            <p dangerouslySetInnerHTML={{__html:data?.[`address_${til}`]}}></p>
+            <a href={`tel: ${data?.phone1}`}>{data?.phone1}</a>
+            <div>
+              <a href={data?.facebook}><Facebook/></a>
+              <a href={data?.telegram}><Telegram/></a>
+              <a href={data?.instagram}><Instagram/></a>
+              <a href={data?.youtube}><Youtube/></a>
+            </div>
           </div>
         </div>
       </div>

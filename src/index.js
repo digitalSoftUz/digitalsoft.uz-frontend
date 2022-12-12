@@ -5,12 +5,14 @@ import "./App.css"
 import "./style/css/_Import.css"
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom";
+import FallbackLoading from './FallbackLoading';
+import "./utils/i18next"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Suspense fallback={null}>
+      <Suspense fallback={FallbackLoading}>
         <App />
       </Suspense>
     </Router>

@@ -1,4 +1,7 @@
 import React, { Component, createContext } from 'react';
+import axios from "axios";
+import i18next from 'i18next';
+import { BaseUrl } from '../contans';
 
 export const DS = createContext();
 
@@ -6,7 +9,10 @@ class Mode extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      scroll: 0
+      scroll: 0,
+      homeData:[],
+      til: i18next.language,
+      loading: false
     }
   }
   listenToScroll = () => {
@@ -18,12 +24,19 @@ class Mode extends Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll);
+
+    axios.get(`${BaseUrl}/api/home/${this.state.til}`).then((res)=>{
+      // console.log(res.data.data)
+      const data = res?.data.data
+      this.setState({
+        homeData: data
+      })
+    })
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.listenToScroll)
   }
   render() { 
-    // console.log(this.state.scroll)
     return ( 
       <DS.Provider
         value={{

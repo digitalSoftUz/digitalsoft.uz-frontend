@@ -35,10 +35,14 @@
   font-size: 18px;
   line-height: 21px;
   color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .navbar a:hover, .navbar button:hover {
   color: #40a9ff;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .navbar .nav {
@@ -94,12 +98,17 @@
   display: none;
 }
 
+.uz__active, .ru__active, .en__active {
+  display: none;
+}
+
 .nav__dropdown {
   background: rgba(43, 2, 57, 0.7);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   border-radius: 5px;
   border: 1px solid #FFFFFF;
+  padding: 0;
 }
 
 .nav__dropdown li {
@@ -108,6 +117,23 @@
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFF;
+  padding: 0;
+}
+
+.nav__dropdown li .ant-dropdown-menu-title-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav__dropdown li button {
+  width: 100%;
 }
 
 .nav__dropdown a:hover {

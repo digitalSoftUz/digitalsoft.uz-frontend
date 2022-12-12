@@ -1,14 +1,48 @@
 import React, { useState } from 'react';
-// import {Logo} from "../assets/icons"
-import { Link } from 'react-router-dom';
+import i18next from 'i18next';
 import { DS } from '../context/context';
-import LogoGrey from "../assets/icons/Logo_grey.png"
+import { NavLink } from 'react-router-dom';
+import { Button, Dropdown, Menu } from 'antd';
+import { useTranslation } from "react-i18next";
+import LogoGrey from "../assets/icons/Logo_grey.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  var data = props.data
+  const { t } = useTranslation()
   const [burger, setBurger] = useState(true);
   const HandleBurger = () => {
     setBurger(!burger)
+  };
+  const scrollTop = () =>{
+    window.scrollTo(0 ,0)
+  };
+  const Reload = () => {
+    window.location.reload()
   }
+  const handleRu = () => {
+    return i18next.changeLanguage("ru")
+  }
+  const handleUz = () => {
+    return i18next.changeLanguage("uz")
+  }
+  const handleEn = () => {
+    return i18next.changeLanguage("en")
+  }
+  
+  var til = i18next.language
+  var til_uz = til === "uz" ? "uz__active" : ""
+  var til_ru = til === "ru" ? "ru__active" : ""
+  var til_en = til === "en" ? "en__active" : ""
+  const items = (
+    <Menu
+      className='nav__dropdown'
+      items={[
+        { label: <Button onClick={()=>{handleUz();Reload()}} type='link'>UZ</Button>, key: "0", className: til_uz},
+        { label: <Button onClick={()=>{handleRu();Reload()}} type='link'>РУ</Button>, key: "1", className: til_ru},
+        { label: <Button onClick={()=>{handleEn();Reload()}} type='link'>EN</Button>, key: "2", className: til_en},
+      ]}
+    />
+  );
   return (
     <DS.Consumer>
       {(x)=>{
@@ -19,7 +53,6 @@ const Navbar = () => {
           >
             <div className="navbar container">
               <a href='/' className="logo">
-                {/* <Logo/> */}
                 <img src={LogoGrey} alt="" />
                 <div>
                   <p>DIGITAL</p>
@@ -33,11 +66,14 @@ const Navbar = () => {
               </button>
               <nav className={burger ? 'nav' : 'nav nav__show'}>
                 <div onClick={HandleBurger} className={burger ? "nav__close" : "nav__close nav__opened"}></div>
-                <Link to='about' type='link'>Biz haqimizda</Link>
-                <Link to='xizmatlar' type='link'>Xizmatlar</Link>
-                <Link to='portfolio' type='link'>Portfolio</Link>
-                <Link to='vakansiya' type='link'>Vakansiya</Link>
-                <a href='#Contact' className="link">Biz bilan bog’lanish</a>
+                <NavLink to='about' onClick={scrollTop}>{t("NAV1")}</NavLink>
+                <NavLink to='xizmatlar' onClick={scrollTop}>{t("NAV2")}</NavLink>
+                <NavLink to='portfolio' onClick={scrollTop}>{t("NAV3")}</NavLink>
+                <NavLink to='vakansiya' onClick={scrollTop}>{t("NAV4")}</NavLink>
+                <a href={`tel: ${data?.phone1}`}>{data?.phone1}</a>
+                <Dropdown overlay={items} placement="bottom" arrow>
+                  <Button type='link'>{t("TIL")}</Button>
+                </Dropdown>
               </nav>
             </div>
           </div>

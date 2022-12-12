@@ -1,27 +1,29 @@
 import React from 'react';
-import { dataTech } from '../../../data/data';
+import { BaseUrl } from '../../../contans';
+import { useTranslation } from "react-i18next";
+// import { dataTech } from '../../../data/data';
 
-const Texnologiyalar = () => {
+const Texnologiyalar = (props) => {
+  var dataCard = props.data.mainTechnologyCard
+  const { t } = useTranslation()
   return (
     <React.Fragment>
       <div className="texnologiyalar container">
-        <h1 className='h1__title'>Texnologiyalar</h1>
-        <h2 className='h2__title'>
-          DigitalSoftda dasturiy ta'minotni ishlab chiqish va autsorsing ehtiyojlarini qondirish uchun barcha talab qilinadigan texnologiyalar va platformalar bo'yicha tajribamiz bilan qidirayotgan narsangizni oling.
-        </h2>
+        <h1 className='h1__title'>{t("TECH")}</h1>
+        <h2 className='h2__title'>{t("TECH_TITLE")}</h2>
         <div className="tech__items">
-          {dataTech?.map((item, index)=>{
+          {dataCard?.map((item, index)=>{
             return(
               <div className="tech__item" key={index}>
                 <p>{item.title}</p>
                 <div className="techs">
-                  {item.tech.map((tech, i)=>{
+                  {item.technologies.map((tech, i)=>{
                     return(
                       <div key={i}>
                         <span>
-                          <img src={tech.icon} alt="" />
+                          <img src={BaseUrl+tech.icon} alt="" />
                         </span>
-                        {tech.name}
+                        {tech.title}
                       </div>
                     )
                   })}
@@ -32,11 +34,11 @@ const Texnologiyalar = () => {
         </div>
         <div className='contact__link'>
           <a href="#Contact"  className="btn__animation">
-            Biz bilan bog’laning
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            {t("BOGLANING")}
+            <span className='span__anima1'></span>
+            <span className='span__anima2'></span>
+            <span className='span__anima3'></span>
+            <span className='span__anima4'></span> 
           </a>
         </div>
       </div>

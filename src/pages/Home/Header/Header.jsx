@@ -1,9 +1,11 @@
 import React from 'react';
-import Earth from './Earth';
 import App from './sphere';
+import i18next from 'i18next';
 import Logo from "../../../assets/icons/Logo.png"
 
-const Header = () => {
+const Header = (props) => {
+  var data = props.data
+  var til = i18next.language
   return (
     <React.Fragment>
       <div className="header_home">
@@ -17,9 +19,7 @@ const Header = () => {
           <div className="color"></div>
           <div className="color"></div>
         </div>
-        <h1>
-          Digital <span>Soft</span> raqamli kelajak sari qadam.
-        </h1>
+        <h1 dangerouslySetInnerHTML={{__html:data?.[`title_${til}`]}}></h1>
       </div>
     </React.Fragment>
   )

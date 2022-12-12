@@ -59,8 +59,9 @@
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-columns: (200px)[all];
-      grid-template-columns: repeat(all, 200px);
+  -ms-grid-rows: (200px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 200px);
+  grid-auto-rows: 200px;
   grid-gap: 30px;
 }
 
@@ -148,6 +149,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .filter__item img {
@@ -311,6 +314,39 @@
   border-radius: 50%;
 }
 
+.paginations {
+  margin-top: 50px;
+}
+
+.paginations .ant-pagination-jump-next,
+.paginations .ant-pagination-jump-prev,
+.paginations .ant-pagination-next,
+.paginations .ant-pagination-prev {
+  min-width: 25px;
+}
+
+.paginations .ant-pagination-jump-next button,
+.paginations .ant-pagination-jump-prev button,
+.paginations .ant-pagination-next button,
+.paginations .ant-pagination-prev button {
+  background: rgba(0, 102, 255, 0.2);
+  border: none;
+  color: white;
+}
+
+.paginations .ant-pagination-item {
+  background: rgba(0, 102, 255, 0.2);
+  border: none;
+}
+
+.paginations .ant-pagination-item a {
+  color: white;
+}
+
+.paginations .ant-pagination-item-ellipsis {
+  color: white !important;
+}
+
 @media (max-width: 1440px) {
   .filter__btn button {
     padding: 15px 30px;
@@ -341,15 +377,13 @@
   .filter__results {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
   }
   .portfolio__page {
     padding-top: 100px;
   }
   .portfolio__filter {
     margin-top: 30px;
-  }
-  .filter__results {
-    margin-top: 50px;
   }
   .filter__btn button {
     padding: 10px 20px;

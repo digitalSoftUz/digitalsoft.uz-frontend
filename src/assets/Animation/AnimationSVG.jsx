@@ -1,11 +1,9 @@
-// import "./style.css";
-
 export const AnimatedAndroid = () => (
   <svg
     id="eBgKCm8Hl3o1"
     viewBox="0 0 60 60"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <g transform="matrix(.970071 0 0 1.058355 9.261649 0.000382)">
@@ -30,8 +28,8 @@ export const AnimatedAndroid2 = () => (
   <svg
     className="Animated_Android"
     viewBox="0 0 61 57.001"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <style></style>
@@ -59,8 +57,8 @@ export const AnimatedWeb = () => (
   <svg
     id="efdkn1a7VSF1"
     viewBox="0 0 62 59"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <path d="M2.8457,0.228077C1.69531,0.591358,0.666016,1.56011,0.242188,2.68628C0,3.32808,0,3.60659,0,24.8828c0,21.4336,0,21.5547.254297,22.2086.314844.8718,1.126173,1.7437,2.010153,2.1918.65391.339.79922.3632,2.37344.3996l1.65899.0484v-1.0898-1.0899l-1.44102-.0484c-1.59844-.0364-1.86484-.1453-2.40977-.9446l-.2664-.3996v-21.2761-21.27621l.27851-.3996c.14532-.21798.42383-.52071.60547-.65391l.33906-.2543L26.7254,2.26245c25.9746-.02421,23.7828-.09687,24.473.79922.3028.39961.327.5207.3633,1.86484l.0485,1.42891h1.0898h1.0898l-.0484-1.61055c-.0363-1.4289-.0726-1.67109-.3512-2.27656-.4117-.87187-1.1625-1.622653-2.0343-2.034373l-.6782-.314842-23.6738-.02422c-18.76952-.012111-23.7707.012108-24.1582.133202Z" />
@@ -115,8 +113,8 @@ export const AnimatedLogistic = () => (
   <svg
     id="eve4kjUaAM71"
     viewBox="0 0 70 70"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <g transform="translate(-4.005382 0.000001)">
@@ -156,7 +154,7 @@ export const AnimatedLogistic = () => (
           transform="matrix(1.059999 0 0 1 20.139978 48.560269)"
           fill="none"
           stroke="#fff"
-          stroke-width="0.7"
+          strokeWidth="0.7"
         />
         <line
           x1="-3.971368"
@@ -166,7 +164,7 @@ export const AnimatedLogistic = () => (
           transform="matrix(0 1.059999-1 0 20.139978 48.560269)"
           fill="none"
           stroke="#fff"
-          stroke-width="0.7"
+          strokeWidth="0.7"
         />
       </g>
     </g>
@@ -183,7 +181,7 @@ export const AnimatedLogistic = () => (
           transform="matrix(1.059999 0 0 1 20.139978 48.560269)"
           fill="none"
           stroke="#fff"
-          stroke-width="0.7"
+          strokeWidth="0.7"
         />
         <line
           x1="-3.971368"
@@ -193,7 +191,7 @@ export const AnimatedLogistic = () => (
           transform="matrix(0 1.059999-1 0 20.139978 48.560269)"
           fill="none"
           stroke="#fff"
-          stroke-width="0.7"
+          strokeWidth="0.7"
         />
       </g>
     </g>
@@ -203,8 +201,8 @@ export const AnimatedChart = () => (
   <svg
     id="ezEmM5xpFNZ1"
     viewBox="0 0 62 60"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <g
@@ -250,7 +248,7 @@ export const AnimatedChart = () => (
         transform="translate(-2.841047,-2.722153)"
         fill="#fff"
         stroke="#fff"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </g>
     <g id="ezEmM5xpFNZ7_to" transform="translate(25.243767,13.696376)">
@@ -260,7 +258,7 @@ export const AnimatedChart = () => (
         transform="translate(-2.841047,-2.722153)"
         fill="#fff"
         stroke="#fff"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </g>
     <g id="ezEmM5xpFNZ8_to" transform="translate(42.447628,20.624555)">
@@ -270,7 +268,7 @@ export const AnimatedChart = () => (
         transform="translate(-2.841047,-2.722153)"
         fill="#fff"
         stroke="#fff"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </g>
     <g id="ezEmM5xpFNZ9_to" transform="translate(59.633997,11.838777)">
@@ -280,7 +278,7 @@ export const AnimatedChart = () => (
         transform="translate(-2.841047,-2.722153)"
         fill="#fff"
         stroke="#fff"
-        stroke-width="3"
+        strokeWidth="3"
       />
     </g>
     <g id="ezEmM5xpFNZ10_to" transform="translate(13.849504,16.215845)">
@@ -293,7 +291,7 @@ export const AnimatedChart = () => (
           transform="scale(1.09182,-1) translate(0,0)"
           fill="rgba(0,0,0,0)"
           stroke="#fff"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </g>
     </g>
@@ -308,7 +306,7 @@ export const AnimatedChart = () => (
             transform="translate(0,0)"
             fill="rgba(0,0,0,0)"
             stroke="#fff"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </g>
       </g>
@@ -323,7 +321,7 @@ export const AnimatedChart = () => (
           transform="scale(1.075245,-1) translate(0,0)"
           fill="rgba(0,0,0,0)"
           stroke="#fff"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </g>
     </g>
@@ -333,8 +331,8 @@ export const AnimatedQA = () => (
   <svg
     id="eaHDiOPBZfY1"
     viewBox="0 0 60 60"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <rect
@@ -345,7 +343,7 @@ export const AnimatedQA = () => (
       transform="translate(1 1)"
       fill="none"
       stroke="#fff"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <g id="eaHDiOPBZfY3_to" transform="translate(18.114805,36.483909)">
       <g transform="translate(-17.614075,-36.033537)">
@@ -355,7 +353,7 @@ export const AnimatedQA = () => (
           transform="translate(-.415645-2.46357)"
           fill="none"
           stroke="#fff"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </g>
     </g>
@@ -367,7 +365,7 @@ export const AnimatedQA = () => (
           transform="matrix(-1 0 0 1 59.703237-2.46357)"
           fill="none"
           stroke="#fff"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </g>
     </g>
@@ -379,7 +377,7 @@ export const AnimatedQA = () => (
       transform="translate(29.855475 13.418806)"
       fill="none"
       stroke="#fff"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <ellipse
       id="eaHDiOPBZfY10"
@@ -389,7 +387,7 @@ export const AnimatedQA = () => (
       opacity="0.1"
       fill="none"
       stroke="#fff"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <ellipse
       id="eaHDiOPBZfY11"
@@ -399,7 +397,7 @@ export const AnimatedQA = () => (
       opacity="0.1"
       fill="none"
       stroke="#fff"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <ellipse
       id="eaHDiOPBZfY12"
@@ -409,7 +407,7 @@ export const AnimatedQA = () => (
       opacity="0.1"
       fill="none"
       stroke="#fff"
-      stroke-width="2"
+      strokeWidth="2"
     />
   </svg>
 );
@@ -417,8 +415,8 @@ export const AnimatedUX = () => (
   <svg
     id="eEDcp8U9jkg1"
     viewBox="0 0 62 66"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
     fill="#fff"
   >
     <g id="eEDcp8U9jkg2_to" transform="translate(33.543752,25.379239)">

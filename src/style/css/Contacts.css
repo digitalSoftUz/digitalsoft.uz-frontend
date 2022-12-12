@@ -110,6 +110,14 @@
   border: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
+#hide__sec #second__step {
+  display: none;
+}
+
+#hide__sec::before {
+  display: none;
+}
+
 .contact_step {
   position: relative;
   padding-left: 70px;
@@ -156,6 +164,31 @@
           justify-content: center;
   border-radius: 0 10px 10px 0;
   padding: 0 20px;
+}
+
+.contact__form .ant-select {
+  width: 280px;
+}
+
+.contact__form .ant-select-selector {
+  background: rgba(255, 255, 255, 0) !important;
+  border: 1px solid white !important;
+  border-radius: 5px !important;
+  height: 45px !important;
+}
+
+.contact__form .ant-select-selection-item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 21px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__form button {
@@ -212,7 +245,7 @@
   line-height: 28px;
   color: #FFFFFF;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .contact__form span {
@@ -250,20 +283,17 @@
   color: white;
 }
 
-.inp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.inp__group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
   width: 100%;
+  padding: 20px 10px;
 }
 
-.inp p {
+.inp__group p {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -272,12 +302,12 @@
   margin-bottom: 10px;
 }
 
-.inp input {
+.inp__group input {
   background: rgba(255, 255, 255, 0);
   border: 1px solid white;
   border-radius: 5px;
   outline: none;
-  width: 100%;
+  width: 280px;
   height: 45px;
   padding: 0 5px;
   font-style: normal;
@@ -290,8 +320,7 @@
           flex-grow: 1;
 }
 
-.inp div, .inp label {
-  margin: 20px 10px;
+.inp__group .inp {
   width: 100%;
 }
 
@@ -309,15 +338,16 @@
   margin-bottom: 10px;
 }
 
-.textarea textarea {
+.textarea textarea, .textarea input {
   background: rgba(255, 255, 255, 0);
   border: 1px solid white;
   border-radius: 5px;
   outline: none;
   width: 100%;
-  height: 200px;
-  min-height: 200px;
-  max-height: 200px;
+  max-width: 580px;
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
   padding: 5px;
   font-style: normal;
   font-weight: 400;
@@ -326,20 +356,26 @@
   color: #FFFFFF;
 }
 
-.textarea textarea::-webkit-scrollbar {
+.textarea textarea::-webkit-scrollbar, .textarea input::-webkit-scrollbar {
   width: 0.3em;
   height: 0;
 }
 
-.textarea textarea::-webkit-scrollbar-track {
+.textarea textarea::-webkit-scrollbar-track, .textarea input::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 2px #3A1163;
           box-shadow: inset 0 0 2px #3A1163;
   background: rgba(255, 255, 255, 0.76);
 }
 
-.textarea textarea::-webkit-scrollbar-thumb {
+.textarea textarea::-webkit-scrollbar-thumb, .textarea input::-webkit-scrollbar-thumb {
   background-color: #3A1163;
   border-radius: 2px;
+}
+
+.textarea input {
+  height: 45px;
+  min-height: 45px;
+  max-height: 45px;
 }
 
 .contact__modal {
@@ -367,11 +403,17 @@
   height: 155px;
 }
 
-.contact__modal .type__file {
-  margin-top: 30px;
+.type__file {
+  padding: 20px 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.contact__modal .type__file label {
+.type__file label {
+  width: 100%;
+  max-width: 580px;
   height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,11 +437,11 @@
   overflow: hidden;
 }
 
-.contact__modal .type__file label span {
+.type__file label span {
   margin-left: 10px;
 }
 
-.contact__modal .type__file label input {
+.type__file label input {
   border: none;
   display: none;
 }
@@ -410,6 +452,12 @@
   }
   .contact__modal .contact__info {
     padding: 30px 20px;
+  }
+  .inp__group input {
+    width: 250px;
+  }
+  .contact__form .ant-select {
+    width: 250px;
   }
 }
 
@@ -427,11 +475,11 @@
   .contact__form {
     padding: 0 10px;
   }
-  .contact__form p {
-    margin-top: 30px;
+  .contact__form .ant-select {
+    width: 230px;
   }
-  .inp div {
-    margin: 10px;
+  .inp__group input {
+    width: 230px;
   }
 }
 
@@ -444,9 +492,6 @@
   .contact__modal .contact_steps::before {
     display: none;
   }
-  .contact__modal .contact__form p {
-    margin-top: 10px;
-  }
 }
 
 @media (max-width: 930px) {
@@ -457,8 +502,17 @@
   .contact_steps::before {
     height: 130px;
   }
-  .contact__form {
-    border-radius: 0 0 10px 10px;
+  .inp__group input {
+    width: 100%;
+  }
+  .contact__form .ant-select {
+    width: 100%;
+  }
+  .textarea textarea, .textarea input {
+    max-width: none;
+  }
+  .type__file label {
+    max-width: none;
   }
 }
 
@@ -475,8 +529,16 @@
   }
 }
 
+@media (max-width: 695px) {
+  .inp__group {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 5px 10px;
+  }
+}
+
 @media (max-width: 600px) {
-  .contact__modal .inp {
+  .contact__modal .inp__group {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -502,24 +564,8 @@
 }
 
 @media (max-width: 500px) {
-  .contact__form p {
-    margin-top: 20px;
-  }
   .contact__form form {
     margin-top: 20px;
-  }
-  .inp {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .inp div {
-    margin: 10px;
-  }
-  .textarea {
-    margin-bottom: 20px;
-    padding: 0;
   }
 }
 
@@ -537,7 +583,6 @@
   }
   .contact__modal .contact__form p {
     font-size: 15px;
-    margin-top: 0;
   }
   .contact__info {
     padding: 20px;
@@ -582,10 +627,10 @@
   .contact_steps::before {
     left: 17.5px;
   }
-  .inp p, .textarea p {
+  .inp__group p, .textarea p {
     font-size: 15px;
   }
-  .inp input, .inp textarea, .textarea input, .textarea textarea {
+  .inp__group input, .inp__group textarea, .textarea input, .textarea textarea {
     font-size: 14px;
   }
 }

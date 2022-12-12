@@ -1,20 +1,24 @@
 import React from 'react';
-import { dataHamkorlik } from '../../../data/data';
+import { BaseUrl } from '../../../contans';
+import { useTranslation } from "react-i18next";
 import bg from "../../../assets/images/Hamkorlik/bg.png"
+// import { dataHamkorlik } from '../../../data/data';
 
-const Hamkorlik = () => {
+const Hamkorlik = (props) => {
+  var dataCard = props.data.partners
+  const { t } = useTranslation()
   return (
     <React.Fragment>
       <div className="hamkorlik container">
-        <h1 className='h1__title'>hamkorlar</h1>
-        <h2 className='h2__title'>Bizga ishonch bildirgan hamkorlar</h2>
+        <h1 className='h1__title'>{t("HAMKORLAR")}</h1>
+        <h2 className='h2__title'>{t("HAMKORLAR2")}</h2>
         <img src={bg} alt="" className='hamkorlik__bg' />
         <div className="hamkorlar">
-          {dataHamkorlik?.map((item, index)=>{
+          {dataCard?.map((item, index)=>{
             return(
-              <div className='hamkorlar__item' key={index}>
-                <img src={item.img} alt="" />
-              </div>
+              <a href={item.website} className='hamkorlar__item' key={index}>
+                <img src={BaseUrl+item.logo} alt="" />
+              </a>
             )
           })}
         </div>

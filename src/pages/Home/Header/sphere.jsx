@@ -1,6 +1,6 @@
 import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import img from "./texture/home7.jpg"
+import img from "./texture/earth4.jpg"
 import { useTexture } from '@react-three/drei'
 
 function Scene() {
