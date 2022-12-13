@@ -7,6 +7,8 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import FallbackLoading from "./FallbackLoading"
 
 import "swiper/css";
+import 'animate.css';
+import "swiper/css/grid";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import 'antd/dist/antd.min.css';

@@ -1,6 +1,6 @@
 import React from 'react';
 import i18next from 'i18next';
-import { Navigation } from "swiper";
+import { Grid, Navigation } from "swiper";
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,16 +16,25 @@ const Jamoa = (props) => {
         <div className="slider__container">
           <Swiper
             slidesPerView={3.5}
+            grid={{
+              rows: 2,
+            }}
             spaceBetween={20}
             navigation={true}
             breakpoints={{
               10: {
                 slidesPerView: 1,
                 spaceBetween: 10,
+                grid:{
+                  rows: 1
+                }
               },
-              640: {
+              651: {
                 slidesPerView: 1,
                 spaceBetween: 10,
+                grid:{
+                  rows: 2
+                }
               },
               768: {
                 slidesPerView: 2,
@@ -44,7 +53,7 @@ const Jamoa = (props) => {
                 spaceBetween: 20,
               },
             }}
-            modules={[Navigation]}
+            modules={[Grid, Navigation]}
             className="jamoa_Swiper"
           >
             {data?.map((item, index)=>{
