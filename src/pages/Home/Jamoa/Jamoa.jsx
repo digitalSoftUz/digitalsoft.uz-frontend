@@ -1,7 +1,5 @@
 import React from 'react';
 import { BaseUrl } from '../../../contans';
-// import { Check } from '../../../assets/icons';
-// import { dataInfo, dataJamoa } from '../../../data/data';
 import i18next from 'i18next';
 
 const Jamoa = (props) => {

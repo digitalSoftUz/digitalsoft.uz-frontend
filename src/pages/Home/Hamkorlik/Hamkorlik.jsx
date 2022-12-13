@@ -2,7 +2,6 @@ import React from 'react';
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
 import bg from "../../../assets/images/Hamkorlik/bg.png"
-// import { dataHamkorlik } from '../../../data/data';
 
 const Hamkorlik = (props) => {
   var dataCard = props.data.partners

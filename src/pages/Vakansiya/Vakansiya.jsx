@@ -12,7 +12,6 @@ import {
   UploadOutlined, 
   FileOutlined 
 } from '@ant-design/icons';
-// import { dataVacancy } from '../../data/data';
 
 const Vakansiya = () => {
   var til = i18next.language
@@ -27,14 +26,6 @@ const Vakansiya = () => {
   const [phone, setPhone] = useState("");
   const [text, setText] = useState("");
   const okText = load ? <SyncOutlined spin /> : t("SEND_RESUME")
-  // const CloseModal = () =>{
-  //   setLoad(true)
-  //   setTimeout(() => {
-  //     setOpened(false)
-  //     setLoad(false)
-  //     ClearAll()
-  //   }, 1000);
-  // }
   const CloseModalX = () =>{
     setOpened(false)
     ClearAll()
@@ -44,6 +35,7 @@ const Vakansiya = () => {
     setSurname("")
     setEmail("")
     setPhone("")
+    setText("")
     setFile([])
   }
   const handlePost = () =>{
@@ -73,7 +65,6 @@ const Vakansiya = () => {
       setData(res.data)
     })
     axios.get(`${BaseUrl}/api/form-content/${til}?type=Resume`).then((res)=>{
-      // console.log(res.data)
       setFormContact(res.data)
     })
   },[])

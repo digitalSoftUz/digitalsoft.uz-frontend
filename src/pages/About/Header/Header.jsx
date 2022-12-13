@@ -1,8 +1,6 @@
 import React from 'react';
 import i18next from 'i18next';
 import { BaseUrl } from '../../../contans';
-// import { dataInfo } from '../../../data/data';
-// import Video from "../../../assets/video/video.mp4"
 
 const Header = (props) => {
   var til = i18next.language

@@ -26,7 +26,6 @@ class Mode extends Component {
     window.addEventListener('scroll', this.listenToScroll);
 
     axios.get(`${BaseUrl}/api/home/${this.state.til}`).then((res)=>{
-      // console.log(res.data.data)
       const data = res?.data.data
       this.setState({
         homeData: data

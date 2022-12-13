@@ -1,9 +1,10 @@
 import React from 'react';
+import i18next from 'i18next';
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
-// import { dataTech } from '../../../data/data';
 
 const Texnologiyalar = (props) => {
+  var til = i18next.language
   var dataCard = props.data.mainTechnologyCard
   const { t } = useTranslation()
   return (
@@ -15,7 +16,7 @@ const Texnologiyalar = (props) => {
           {dataCard?.map((item, index)=>{
             return(
               <div className="tech__item" key={index}>
-                <p>{item.title}</p>
+                <p>{item[`title_${til}`]}</p>
                 <div className="techs">
                   {item.technologies.map((tech, i)=>{
                     return(

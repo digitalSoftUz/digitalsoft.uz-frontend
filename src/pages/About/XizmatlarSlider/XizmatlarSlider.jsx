@@ -3,7 +3,6 @@ import i18next from 'i18next';
 import { Navigation } from "swiper";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { dataXizmatlar } from '../../../data/data';
 
 const XizmatlarSlider = (props) => {
   var til = i18next.language

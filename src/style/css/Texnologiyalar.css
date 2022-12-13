@@ -166,31 +166,6 @@
   margin-top: 70px;
 }
 
-.b_texnologiyalar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 100px;
-  background: url(../../assets/images/tech_bg.webp);
-  background-position: center;
-  background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.b_tech__item {
-  background: #3A1163;
-  border: 1px solid #0066FF;
-  border-radius: 10px;
-}
-
 @media (max-width: 1440px) {
   .tech__items {
     grid-gap: 30px;

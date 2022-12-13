@@ -4,7 +4,6 @@ import { Navigation } from "swiper";
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { dataTeam } from '../../../data/data';
 
 const Jamoa = (props) => {
   var data = props.data

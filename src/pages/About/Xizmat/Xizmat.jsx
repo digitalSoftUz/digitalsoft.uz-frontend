@@ -3,7 +3,6 @@ import i18next from 'i18next';
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from '../../../assets/icons';
-// import { dataXizmat } from '../../../data/data';
 
 const Xizmat = (props) => {
   var til = i18next.language

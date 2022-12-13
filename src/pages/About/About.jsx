@@ -10,12 +10,11 @@ import { DS } from '../../context/context';
 import XizmatlarSlider from './XizmatlarSlider/XizmatlarSlider';
 
 const About = () => {
-  var til = i18next.language
   const [data, setData] = useState([]);
   useEffect(()=>{
+    var til = i18next.language
     axios.get(`${BaseUrl}/api/about/${til}/`).then((res)=>{
       setData(res.data)
-      // console.log(res.data)
     })
   },[])
   return (

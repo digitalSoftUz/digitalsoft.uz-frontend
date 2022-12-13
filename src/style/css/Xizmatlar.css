@@ -3,6 +3,10 @@
   src: url(../../assets/fonts/Messages.ttf);
 }
 
+.page__xizmatlar {
+  padding-top: 150px;
+}
+
 .xizmatlar {
   position: relative;
 }
@@ -543,6 +547,9 @@
   .xizmatlar__slider {
     padding: 0 70px 0 0;
   }
+  .page__xizmatlar {
+    padding-top: 110px;
+  }
 }
 
 @media (max-width: 1350px) {
@@ -580,6 +587,9 @@
   }
   .xizmatlar__slider {
     padding: 0 30px 0 0;
+  }
+  .page__xizmatlar {
+    padding-top: 70px;
   }
 }
 
@@ -641,6 +651,9 @@
     width: 50px;
     height: 50px;
   }
+  .page__xizmatlar {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -650,6 +663,9 @@
 }
 
 @media (max-width: 425px) {
+  .page__xizmatlar {
+    padding-top: 40px;
+  }
   .xizmatlar__top h1 {
     font-size: 23px;
     line-height: 28px;

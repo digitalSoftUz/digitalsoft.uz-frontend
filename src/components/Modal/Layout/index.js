@@ -39,7 +39,7 @@ export const Layout = ({ onClose, children, opened }) => {
         unmountOnExit
         classNames={overlayAnimation}
       >
-        <div ref={overlayRef} className={styles.overlay} onClick={onClose} />
+        <div ref={overlayRef} className={styles.overlay} id="modal__overlay" onClick={onClose} />
       </CSSTransition>
       <CSSTransition
         in={animationIn}

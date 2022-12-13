@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import i18next from 'i18next';
 import { useTranslation } from "react-i18next"
 import { ArrowLeft } from '../../../assets/icons';
-// import { dataXizmatlar } from '../../../data/data';
 
 const Xizmatlar = (props) => {
   var til = i18next.language

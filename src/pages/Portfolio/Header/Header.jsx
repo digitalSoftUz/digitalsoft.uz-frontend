@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Pagination } from "antd";
 import i18next from 'i18next';
+import { Pagination } from "antd";
 import { BaseUrl } from '../../../contans';
 import { useTranslation } from "react-i18next";
-import SkeletonPortfolio from '../../../components/Skeleton/SkeletonProtfolio';
-// import { dataProgects } from "../../../data/data"
+import { RotatoWord } from '../../../assets/icons';
+import PortfolioModal from '../PortfolioModal/PortfolioModal';
 import { ComplexAnimatedModal } from '../../../components/Modal';
+import SkeletonPortfolio from '../../../components/Skeleton/SkeletonProtfolio';
 
 
 const Header = () => {
@@ -24,14 +25,20 @@ const Header = () => {
     setPage(1)
   }
   
+  const [opened, setOpened] = useState(false);
+  const [items, setItems] = useState([]);
+  const hamdleOpen = (item) => {
+    setOpened(true)
+    setItems(item)
+  }
+  
+  
   useEffect(()=>{
     var til = i18next.language
     axios.get(`${BaseUrl}/api/portifolio-category/${til}`).then((res)=>{
       setDataCategory(res.data.data)
-      // console.log(res.data.data)
     })
-    axios.get(`${BaseUrl}/api/portifolio/${til}/?category=${category}&count=7&page=${page}`).then((res)=>{
-      console.log(res.data.data.result)
+    axios.get(`${BaseUrl}/api/portifolio/${til}/?category=${category}&count=7&page=${page}&is_show_main=true`).then((res)=>{
       setTimeout(() => {
         setLoad(false)
       }, 500);
@@ -56,15 +63,33 @@ const Header = () => {
             ? <SkeletonPortfolio/>
             : <div className="filter__results">
                 {data?.map((item, index)=>{
+                  var text = 
+                    item.type === 1 ? "Veb Sayt"
+                  : item.type === 2 ? "video"
+                  : "Galery"
                   return(
-                    <div className='filter__item' key={index}>
+                    item.type === 1 
+                    ? 
+                    <a href={item.link} target={`_blank`} className='filter__item' key={index}>
                       <img src={BaseUrl+item.images[0].image} alt="" />
+                      <p className='f_i_arrow'><RotatoWord text={text}/></p>
+                      <p className='f_i_title'>{item[`title_${til}`]}</p>
+                      <p className='f_i_description'>{item[`description_${til}`]}</p>
+                    </a>
+                    : 
+                    <div className='filter__item' key={index} onClick={()=>hamdleOpen(item)}>
+                      <img src={BaseUrl+item.images[0].image} alt="" />
+                      <p className='f_i_arrow'><RotatoWord  text={text}/></p>
+                      <p className='f_i_title'>{item[`title_${til}`]}</p>
+                      <p className='f_i_description'>{item[`description_${til}`]}</p>
                     </div>
                   )
                 })}
               </div>
             }
-          
+          <ComplexAnimatedModal opened={opened} onClose={() => setOpened(false)}>
+            <PortfolioModal opened={opened} items={items}/>
+          </ComplexAnimatedModal>
           <div className="paginations">
             <Pagination 
               defaultCurrent={page} 

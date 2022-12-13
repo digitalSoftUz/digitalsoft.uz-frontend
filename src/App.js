@@ -10,13 +10,14 @@ import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import 'antd/dist/antd.min.css';
-const Demo = React.lazy(()=> import("./pages/demo/demo"))
+// const Demo = React.lazy(()=> import("./pages/demo/demo"))
 
 const Home = React.lazy(()=> import("./pages/Home/Home"))
 const About = React.lazy(()=> import("./pages/About/About"))
 const NoMatch = React.lazy(()=> import("./components/NoMatch/NoMatch"))
 const Portfolio = React.lazy(()=> import("./pages/Portfolio/Portfolio"))
 const Vakansiya = React.lazy(()=> import("./pages/Vakansiya/Vakansiya"))
+const Services = React.lazy(()=> import("./pages/Xizmatlar/Xizmatlar"))
 
 export default function App(){
   return ( 
@@ -52,7 +53,13 @@ export default function App(){
                     </React.Suspense>
                     } 
                   />
-                  <Route path='demo' element={<Demo/>} />
+                  <Route path='xizmatlar' element={
+                    <React.Suspense fallback={FallbackLoading}>
+                      <Services />
+                    </React.Suspense>
+                    } 
+                  />
+                  {/* <Route path='demo' element={<Demo/>} /> */}
                   <Route path='*' element={<NoMatch/>} />
                 </Route> 
               </Routes>

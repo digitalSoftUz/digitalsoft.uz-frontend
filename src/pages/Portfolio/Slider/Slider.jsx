@@ -3,9 +3,6 @@ import { Navigation } from "swiper";
 import { BaseUrl } from '../../../contans';
 import { Swiper, SwiperSlide } from "swiper/react";
 import i18next from 'i18next';
-// import { dataComments } from '../../../data/data';
-//   
-// [`_${til}`]
 
 const Slider = (props) => {
   var dataTitle = props.data.partnerFeedbackTitle

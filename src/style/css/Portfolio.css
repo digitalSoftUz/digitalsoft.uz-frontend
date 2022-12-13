@@ -162,18 +162,136 @@
   transition: 0.5s;
 }
 
+.filter__item p {
+  position: absolute;
+  z-index: 1;
+  color: white;
+}
+
+.filter__item .f_i_title {
+  top: 0px;
+  left: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(125px);
+          backdrop-filter: blur(125px);
+  border-radius: 0 0 10px 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.filter__item .f_i_description {
+  bottom: 0px;
+  right: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(125px);
+          backdrop-filter: blur(125px);
+  border-radius: 10px 0 0 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.filter__item .f_i_arrow {
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border-radius: 50%;
+  font: 300 1.55rem/1.4 "Josefin Sans";
+  text-transform: uppercase;
+  letter-spacing: 0.1175em;
+  word-spacing: 0.3em;
+  opacity: 0;
+}
+
+.filter__item .f_i_arrow .link__svg {
+  width: 100%;
+  height: auto;
+  transform-box: fill-box;
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 0.05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.filter__item .f_i_arrow .link__svg .link__text {
+  -webkit-animation: rotate normal infinite 12s linear;
+          animation: rotate normal infinite 12s linear;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-shadow: 1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+}
+
+.filter__item .f_i_arrow .link__svg .link__arrow {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  stroke: #0066FF;
+  stroke-width: 3.5px;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.filter__item:hover {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
 .filter__item:hover img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.filter__item .item__info {
-  position: absolute;
-  z-index: 1;
+.filter__item:hover .f_i_arrow {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
 }
 
-.filter__item .item__info p {
-  color: white;
+.filter__item:hover .f_i_title {
+  padding: 10px 5px 5px 10px;
+  opacity: 1;
+}
+
+.filter__item:hover .f_i_description {
+  padding: 5px 10px 10px 5px;
+  opacity: 1;
 }
 
 .portfolio__slider {
@@ -347,6 +465,83 @@
   color: white !important;
 }
 
+.modal__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: calc(90vh - 72px);
+  height: auto;
+  max-width: 80vw;
+  background: white;
+}
+
+.modal__video video {
+  height: 100%;
+  max-height: calc(90vh - 72px);
+  max-width: 80vw;
+  border-radius: 10px;
+}
+
+#modal__overlay {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(125px);
+          backdrop-filter: blur(125px);
+}
+
+.modal__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90vw;
+  height: 80vh;
+  background: white;
+  border-radius: 16px;
+}
+
+.mySwiper__modal {
+  height: 80vh;
+  padding: 30px 50px 50px 50px;
+}
+
+.mySwiper__modal .swiper-button-next::after, .mySwiper__modal .swiper-button-prev::after {
+  color: #0066FF;
+}
+
+.mySwiper__modal img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: auto;
+  border-radius: 25px;
+  background: white;
+}
+
+.mySwiper__modal .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 @media (max-width: 1440px) {
   .filter__btn button {
     padding: 15px 30px;
@@ -355,6 +550,15 @@
 }
 
 @media (max-width: 1024px) {
+  .modal__slider {
+    height: 85vh;
+  }
+  .modal__video {
+    max-width: 90vw;
+  }
+  .modal__video video {
+    max-width: 90vw;
+  }
   .portfolio__galery h1 {
     font-size: 38px;
     line-height: 101%;
@@ -374,6 +578,18 @@
 }
 
 @media (max-width: 768px) {
+  .modal__slider {
+    height: 100%;
+  }
+  .mySwiper__modal {
+    height: 100%;
+  }
+  .modal__video {
+    max-width: 95vw;
+  }
+  .modal__video video {
+    max-width: 95vw;
+  }
   .filter__results {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -404,7 +620,20 @@
   }
 }
 
+@media (max-width: 600px) {
+  .modal__slider {
+    height: 400px;
+    width: 99vw;
+  }
+}
+
 @media (max-width: 425px) {
+  .modal__slider {
+    height: 350px;
+  }
+  .mySwiper__modal {
+    padding: 20px 30px 30px 30px;
+  }
   .portfolio__galery h1 {
     font-size: 30px;
   }
@@ -438,6 +667,9 @@
 }
 
 @media (max-width: 375px) {
+  .modal__slider {
+    height: 300px;
+  }
   .filter__btn button {
     font-size: 13px;
   }
@@ -446,5 +678,11 @@
   }
   .portfolio__slider {
     margin: 30px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal__slider {
+    height: 270px;
   }
 }

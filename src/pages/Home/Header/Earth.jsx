@@ -2,7 +2,7 @@ import React, {useRef, Suspense } from 'react';
 import { Canvas, useFrame } from "@react-three/fiber";
 // import img from "./earth.png"
 
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 // import { useAnimations, OrbitControls } from "@react-three/drei";
 
 const Model = () =>{
@@ -17,7 +17,7 @@ const Render = () => {
   const ref = useRef()
   // console.log(ref.current)
   useFrame((state, delta) => (ref.current.rotation.y += 0.004))
-  useFrame((state, delta) => (ref.current.rotation.x = 0))
+  useFrame((state, delta) => (ref.current.rotation.x = 0.2))
   return(
     <mesh
       ref={ref}
