@@ -12,7 +12,7 @@ class Mode extends Component {
       scroll: 0,
       homeData:[],
       til: i18next.language,
-      loading: false
+      loading: true
     }
   }
   listenToScroll = () => {
@@ -22,14 +22,35 @@ class Mode extends Component {
       scroll: winScroll,
     })
   }
+  handleLoad = () =>{
+    if (this.state.homeData.length === 0 ) {
+      this.setState({
+        loading: true
+      })
+    } else{
+      this.setState({
+        loading: false
+      })
+    }
+  }
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll);
+    var body = document.getElementById("APP")
+    if (this.state.loading) {
+      body.style.position = "fixed"
+    } 
 
     axios.get(`${BaseUrl}/api/home/${this.state.til}`).then((res)=>{
       const data = res?.data.data
       this.setState({
-        homeData: data
+        homeData: data,
       })
+      setTimeout(() => {
+        this.setState({
+          loading: false
+        })
+        body.style.position = "static"
+      }, 1000);
     })
   }
   componentWillUnmount() {
@@ -41,6 +62,7 @@ class Mode extends Component {
         value={{
           ...this.state,
         }}
+        handleLoad={this.handleLoad}
       >
         {this.props.children}
       </DS.Provider>

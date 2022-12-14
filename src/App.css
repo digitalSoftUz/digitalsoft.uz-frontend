@@ -37,6 +37,10 @@ html{
   background-color: #04031E;
   border-radius: 2px;
 }
+:root {
+  --animate-delay: 0.5s;
+  --animate-duration: 1.5s;
+}
 #root{
   overflow: hidden;
   background: #04031E;

@@ -57,6 +57,7 @@
   position: absolute;
   bottom: 0;
   width: 80%;
+  pointer-events: none;
 }
 
 @media (max-width: 1440px) {

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Affix } from 'antd';
 import i18next from 'i18next';
 import { Select } from 'antd';
 import { BaseUrl } from '../contans';
  import { useTranslation } from "react-i18next";
 import { PatternFormat  } from 'react-number-format';
+import { useInView } from 'react-intersection-observer';
 import { 
   SyncOutlined, 
   UploadOutlined, 
@@ -47,6 +49,9 @@ const Contact = () => {
     })
 
   }
+
+  const { ref: RefContact, inView: ElementContact } = useInView();
+
   const [dataService, setDataService] = useState([]);
   const [formContact, setFormContact] = useState([]);
   useEffect(()=>{
@@ -61,8 +66,19 @@ const Contact = () => {
   return (
     <React.Fragment>
       <div className="contacts__container container">
+        <Affix>
+          <span ref={RefContact} className='ref__span'>
+            {/* {ElementContact ? "Yes" : "No"} */}
+          </span>
+        </Affix>
         <div id='Contact'></div>
-        <div className="contacts">
+        <div
+          className={
+            ElementContact
+            ?"contacts animate__animated animate__zoomIn"
+            :"contacts animate__animated animate__zoomOut"
+          }
+        >
           <div className="contact__info">
             <h1>{formContact?.[`title_${til}`]}</h1>
             <div className='contact_steps' id={formContact?.hide_second_part ? "hide__sec":""}>
@@ -103,9 +119,9 @@ const Contact = () => {
                     dropdownMatchSelectWidth={false}
                     onChange={e=>(setServise(e))}
                     >
-                      {dataService?.map((item, index)=>{
+                      {dataService?.map((item)=>{
                         return(
-                          <Option value={item.id} key={index}>
+                          <Option value={item.id} key={item.id}>
                             {item[`title_${til}`]}
                           </Option>
                         )

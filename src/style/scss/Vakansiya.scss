@@ -29,10 +29,13 @@
   justify-content: center;
   grid-area: v1;
   position: relative;
+  .ant-skeleton{
+    width: 75%;
+  }
   h1{
     font-style: normal;
     font-weight: 700;
-    font-size: calc(7vw);
+    font-size: 110px;
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -112,6 +115,13 @@
     background: none;
     margin-top: 50px;
     cursor: pointer;
+  }
+}
+@media (max-width:1920px) {
+  .vacancy__left{
+    h1{
+      font-size: calc(7vw);
+    }
   }
 }
 @media (max-width:1440px) {

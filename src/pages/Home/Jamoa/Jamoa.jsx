@@ -9,22 +9,25 @@ const Jamoa = (props) => {
   var data = props.data.mainAboutUs
   var dataImg = props.data.mainAboutUsImages
   var dataInfo = props.data.mainAboutUsStatistics
-  const { ref: myRef, inView: Element } = useInView();
+  const { ref: RefJamoa, inView: ElementJamoa } = useInView();
   return (
     <React.Fragment>
       <div className="jamoa">
-        <Affix><span className='ref__span'>{Element ? "Yes" : "No"}</span></Affix>
-        
-        <div className="jamoa__container container" ref={myRef}>
+        <Affix>
+          <span ref={RefJamoa} className='ref__span'>
+            {/* {ElementJamoa ? "Yes" : "No"} */}
+          </span>
+        </Affix>
+        <div className="jamoa__container container">
           <div className="jamoa__galery">
-            {dataImg?.map((item, index)=>{
+            {dataImg?.map((item)=>{
               return(
                 <div 
-                  key={index}
+                  key={item.id}
                   className={
-                    Element
-                    ?"jamoa__image animate__animated animate__jackInTheBox"
-                    :"jamoa__image"
+                    ElementJamoa
+                    ?"jamoa__image animate__animated animate__fadeInUp"
+                    :"jamoa__image animate__animated animate__fadeOutDown"
                   }
                 >
                   <img src={BaseUrl+item.image} alt="" />
@@ -35,24 +38,32 @@ const Jamoa = (props) => {
           <div className="jamoa__info">
             <h1 
               className={
-                Element
-                ?"animate__animated animate__lightSpeedInRight"
-                :""
+                ElementJamoa
+                ?"animate__animated animate__zoomIn"
+                :"animate__animated animate__zoomOut"
               }
             >
               {data?.[`title_${til}`]}
             </h1>
             <p
               className={
-                Element
-                ?"animate__animated animate__lightSpeedInRight"
-                :""
+                ElementJamoa
+                ?"animate__animated animate__zoomIn"
+                :"animate__animated animate__zoomOut"
               }
             >{data?.[`text_${til}`]}</p>
             <div className="info__content">
               {dataInfo?.map((item, index)=>{
                 return(
-                  <div className="info__item" key={index}>
+                  <div 
+                    key={item.id}
+                    className={
+                      ElementJamoa
+                      ?"info__item animate__animated animate__backInUp"
+                      :"info__item animate__animated animate__backOutDown"
+                    }
+                    style={{"animationDelay":`${((index+1)/10)+0.1}s`}}
+                  >
                     <div className="info__img">
                       <img src={BaseUrl+item.icon} alt="" />
                     </div>

@@ -30,6 +30,12 @@
   position: relative;
 }
 
+.jamoa__slider .h2__title {
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 .jamoa__slider .slider__container {
   width: 100%;
   border: 2px solid rgba(255, 255, 255, 0.15);
@@ -66,7 +72,6 @@
 }
 
 .jamoa_Swiper {
-  height: 900px;
   padding-bottom: 50px;
 }
 
@@ -83,8 +88,7 @@
 }
 
 .jamoa_Swiper .swiper-slide {
-  height: 400px;
-  width: 400px;
+  height: 450px;
   border-radius: 35px 0 0 0;
   position: relative;
   cursor: pointer;
@@ -687,9 +691,6 @@
         grid-template-rows: repeat(6, 80px);
         grid-template-areas: "G1 G1 G4"  "G1 G1 G4" "G2 G2 G4" "G2 G2 G5" "G3 G3 G5" "G3 G3 G5";
   }
-  .jamoa_Swiper {
-    height: 460px;
-  }
   .jamoa_Swiper .swiper-slide-active .team__skills img {
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
@@ -786,12 +787,6 @@
   .i_t__right {
     -ms-grid-rows: (250px)[1];
         grid-template-rows: repeat(1, 250px);
-  }
-  .jamoa_Swiper {
-    height: 400px;
-  }
-  .jamoa_Swiper .swiper-slide {
-    height: 350px;
   }
   .jamoa_Swiper .swiper-slide .team__skills img {
     width: 32px;

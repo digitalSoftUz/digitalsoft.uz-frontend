@@ -15,13 +15,13 @@ const Home = () => {
       {(x)=>{
         return(
           <div className='home__page'>
-            <Header data={x.homeData?.mainTitle}/>{/* tayyor */}
-            <Jamoa data={x.homeData}/>{/* tayyor */}
-            <Xizmatlar data={x.homeData}/>{/* tayyor */}
-            <Texnologiyalar data={x.homeData}/>{/* tayyor */}
-            <Portfolio data={x.homeData}/>{/*  */}
-            <Hamkorlik data={x.homeData}/>{/* title qoldi */}
-            <Slider data={x.homeData}/>{/* tayyor */}
+            <Header data={x.homeData?.mainTitle}/>
+            <Jamoa data={x.homeData}/>
+            <Xizmatlar data={x.homeData}/>
+            <Texnologiyalar data={x.homeData}/>
+            <Portfolio data={x.homeData}/>
+            <Hamkorlik data={x.homeData}/>
+            <Slider data={x.homeData}/>
             <Contact/>
           </div>
         )

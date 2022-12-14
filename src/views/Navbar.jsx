@@ -33,19 +33,19 @@ const Navbar = (props) => {
   var til_uz = til === "uz" ? "uz__active" : ""
   var til_ru = til === "ru" ? "ru__active" : ""
   var til_en = til === "en" ? "en__active" : ""
-  const items = (
-    <Menu
-      className='nav__dropdown'
-      items={[
-        { label: <Button onClick={()=>{handleUz();Reload()}} type='link'>UZ</Button>, key: "0", className: til_uz},
-        { label: <Button onClick={()=>{handleRu();Reload()}} type='link'>РУ</Button>, key: "1", className: til_ru},
-        { label: <Button onClick={()=>{handleEn();Reload()}} type='link'>EN</Button>, key: "2", className: til_en},
-      ]}
-    />
-  );
   return (
     <DS.Consumer>
       {(x)=>{
+        const items = (
+          <Menu
+            className='nav__dropdown'
+            items={[
+              { label: <Button onClick={()=>{handleUz();Reload();x.handleLoad()}} type='link'>UZ</Button>, key: "0", className: til_uz},
+              { label: <Button onClick={()=>{handleRu();Reload();x.handleLoad()}} type='link'>РУ</Button>, key: "1", className: til_ru},
+              { label: <Button onClick={()=>{handleEn();Reload();x.handleLoad()}} type='link'>EN</Button>, key: "2", className: til_en},
+            ]}
+          />
+        );
         return(
           <div 
             className={x.scroll > 100 ? "navbar__fixed nav__scrolled" : "navbar__fixed"}
@@ -66,10 +66,10 @@ const Navbar = (props) => {
               </button>
               <nav className={burger ? 'nav' : 'nav nav__show'}>
                 <div onClick={HandleBurger} className={burger ? "nav__close" : "nav__close nav__opened"}></div>
-                <NavLink to='about' onClick={scrollTop}>{t("NAV1")}</NavLink>
-                <NavLink to='xizmatlar' onClick={scrollTop}>{t("NAV2")}</NavLink>
-                <NavLink to='portfolio' onClick={scrollTop}>{t("NAV3")}</NavLink>
-                <NavLink to='vakansiya' onClick={scrollTop}>{t("NAV4")}</NavLink>
+                <NavLink to='about' onClick={()=>{scrollTop(); x.handleLoad()}}>{t("NAV1")}</NavLink>
+                <NavLink to='xizmatlar' onClick={()=>{scrollTop(); x.handleLoad()}}>{t("NAV2")}</NavLink>
+                <NavLink to='portfolio' onClick={()=>{scrollTop(); x.handleLoad()}}>{t("NAV3")}</NavLink>
+                <NavLink to='vakansiya' onClick={()=>{scrollTop(); x.handleLoad()}}>{t("NAV4")}</NavLink>
                 <a href={`tel: ${data?.phone1}`}>{data?.phone1}</a>
                 <Dropdown overlay={items} placement="bottom" arrow>
                   <Button type='link'>{t("TIL")}</Button>

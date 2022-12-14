@@ -31,7 +31,7 @@ const PortfolioModal = (props) => {
           >
             {data.images.map((item, index)=>{
               return(
-              <SwiperSlide key={index}>
+              <SwiperSlide key={item.id}>
                 <img src={BaseUrl+item.image} alt=""/>
               </SwiperSlide>
               )

@@ -22,10 +22,10 @@ const About = () => {
       {(x)=>{
         return(
           <div className="xizmatlar__page">
-            <Header data={data}/> {/* tayyor */}
-            <Jamoa data={data.team}/> {/* tayyor */}
-            <Xizmat data={data}/> {/* tayyor */}
-            <XizmatlarSlider data={x.homeData.mainSeriveces}/> {/* tayyor */}
+            <Header data={data}/>
+            <Jamoa data={data.team}/>
+            <Xizmat data={data}/>
+            <XizmatlarSlider data={x.homeData.mainSeriveces}/>
             <Contact/>
           </div>
         )

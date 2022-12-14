@@ -7,6 +7,8 @@ function Scene() {
   const texture = useTexture(img)
   const ref = useRef()
   useFrame((state, delta) => (ref.current.rotation.y += 0.004))
+  // useFrame((state, delta) => (ref.current.rotation.y += 0.004))
+  // console.log(ref.current)
   const material = ({
     roughness: 1,
     transmission: 0.5,

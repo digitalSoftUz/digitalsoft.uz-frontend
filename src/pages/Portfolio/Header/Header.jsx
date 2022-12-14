@@ -53,16 +53,16 @@ const Header = () => {
         <div className="portfolio__filter">
           <div className='filter__btn'>
             <button onClick={()=>CategoryChange(0)}>{t("ALL")}</button>
-            {dataCategory?.map((item, index)=>{
+            {dataCategory?.map((item)=>{
               return(
-                <button key={index} onClick={()=>CategoryChange(item.id)}>{item[`title_${til}`]}</button>
+                <button key={item.id} onClick={()=>CategoryChange(item.id)}>{item[`title_${til}`]}</button>
               )
             })}
           </div>
             {load 
             ? <SkeletonPortfolio/>
             : <div className="filter__results">
-                {data?.map((item, index)=>{
+                {data?.map((item)=>{
                   var text = 
                     item.type === 1 ? "Veb Sayt"
                   : item.type === 2 ? "video"
@@ -70,14 +70,14 @@ const Header = () => {
                   return(
                     item.type === 1 
                     ? 
-                    <a href={item.link} target={`_blank`} className='filter__item' key={index}>
+                    <a href={item.link} target={`_blank`} className='filter__item' key={item.id}>
                       <img src={BaseUrl+item.images[0].image} alt="" />
                       <p className='f_i_arrow'><RotatoWord text={text}/></p>
                       <p className='f_i_title'>{item[`title_${til}`]}</p>
                       <p className='f_i_description'>{item[`description_${til}`]}</p>
                     </a>
                     : 
-                    <div className='filter__item' key={index} onClick={()=>hamdleOpen(item)}>
+                    <div className='filter__item' key={item.id} onClick={()=>hamdleOpen(item)}>
                       <img src={BaseUrl+item.images[0].image} alt="" />
                       <p className='f_i_arrow'><RotatoWord  text={text}/></p>
                       <p className='f_i_title'>{item[`title_${til}`]}</p>

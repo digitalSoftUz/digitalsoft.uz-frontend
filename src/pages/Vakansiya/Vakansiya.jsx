@@ -12,6 +12,7 @@ import {
   UploadOutlined, 
   FileOutlined 
 } from '@ant-design/icons';
+import SkeletonVacancy from '../../components/Skeleton/SkeletonVacancy';
 
 const Vakansiya = () => {
   var til = i18next.language
@@ -19,6 +20,7 @@ const Vakansiya = () => {
   const [data, setData] = useState([]);
   const [opened, setOpened] = useState(false);
   const [load, setLoad] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [file, setFile] = useState([]);
   const [username, setUsername] = useState("");
   const [surname, setSurname] = useState("");
@@ -62,6 +64,9 @@ const Vakansiya = () => {
   useEffect(()=>{
     var til = i18next.language
     axios.get(`${BaseUrl}/api/vacansy/${til}/`).then((res)=>{
+      setTimeout(() => {
+        setLoading(false)
+      }, 700);
       setData(res.data)
     })
     axios.get(`${BaseUrl}/api/form-content/${til}?type=Resume`).then((res)=>{
@@ -72,33 +77,27 @@ const Vakansiya = () => {
     <React.Fragment>
       <div className="vakansiya__page container">
         <Vakancy/>
-        {data?.map((item, index)=>{
-          return(
-            <div className="vacancys" key={index}>
-              <div className="vacancy__left">
-                <h1>{item[`short_title_${til}`]}</h1>
-              </div>
-              <div className="vacancy__right">
-                <h1>{item[`title_${til}`]}</h1>
-                <div className='vacancy__info'>
-                  <span dangerouslySetInnerHTML={{__html:item[`text_${til}`]}}></span>
-                  {/* <div>
-                    <p>{item.dis1}</p>
-                    <span>{item.sub1}</span>
+        {loading 
+        ? <SkeletonVacancy/>
+        : data?.map((item)=>{
+            return(
+              <div className="vacancys" key={item.id}>
+                <div className="vacancy__left">
+                  <h1>{item[`short_title_${til}`]}</h1>
+                </div>
+                <div className="vacancy__right">
+                  <h1>{item[`title_${til}`]}</h1>
+                  <div className='vacancy__info'>
+                    <span dangerouslySetInnerHTML={{__html:item[`text_${til}`]}}></span>
                   </div>
-                  <div>
-                    <p>{item.dis2}</p>
-                    <span>{item.sub2}</span>
-                  </div> */}
+                  <div className='vacancy__btn'>
+                    <button onClick={() => setOpened(true)}>{t("SEND_RESUME")}</button>
+                  </div>
                 </div>
-                <div className='vacancy__btn'>
-                  <button onClick={() => setOpened(true)}>{t("SEND_RESUME")}</button>
-                </div>
-                
               </div>
-            </div>
-          )
-        })}
+            )
+          })
+        } 
         <ComplexAnimatedModal opened={opened} onClose={() => setOpened(false)}>
           <div className="contacts contact__modal">
             <div className="contact__info">

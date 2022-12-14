@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Footer from "./views/Footer";
 import Navbar from './views/Navbar';
 import Mode from './context/context';
 import { DS } from './context/context';
-import { Routes, Route, Outlet } from 'react-router-dom';
 import FallbackLoading from "./FallbackLoading"
+import Loading from './components/Loading/Loading';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 import "swiper/css";
 import 'animate.css';
 import "swiper/css/grid";
+import "swiper/css/lazy";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import 'antd/dist/antd.min.css';
-// const Demo = React.lazy(()=> import("./pages/demo/demo"))
+const Demo = React.lazy(()=> import("./pages/demo/demo"))
 
 const Home = React.lazy(()=> import("./pages/Home/Home"))
 const About = React.lazy(()=> import("./pages/About/About"))
@@ -28,40 +30,41 @@ export default function App(){
         {(x)=>{
           return(
             <React.Fragment>
+              { x.loading ? <Loading/> : ""}
               <Navbar data={x.homeData.contactInfo}/>
               <Routes>
                 <Route path='/' element={<Outlet />}>
                   <Route index element={
-                    <React.Suspense fallback={FallbackLoading}>
+                    <Suspense fallback={FallbackLoading}>
                       <Home />
-                    </React.Suspense>
+                    </Suspense>
                     } 
                   />
                   <Route path='portfolio' element={
-                    <React.Suspense fallback={FallbackLoading}>
+                    <Suspense fallback={FallbackLoading}>
                       <Portfolio />
-                    </React.Suspense>
+                    </Suspense>
                     } 
                   />
                   <Route path='vakansiya' element={
-                    <React.Suspense fallback={FallbackLoading}>
+                    <Suspense fallback={FallbackLoading}>
                       <Vakansiya />
-                    </React.Suspense>
+                    </Suspense>
                     } 
                   />
                   <Route path='about' element={
-                    <React.Suspense fallback={FallbackLoading}>
+                    <Suspense fallback={FallbackLoading}>
                       <About />
-                    </React.Suspense>
+                    </Suspense>
                     } 
                   />
                   <Route path='xizmatlar' element={
-                    <React.Suspense fallback={FallbackLoading}>
+                    <Suspense fallback={FallbackLoading}>
                       <Services />
-                    </React.Suspense>
+                    </Suspense>
                     } 
                   />
-                  {/* <Route path='demo' element={<Demo/>} /> */}
+                  <Route path='demo' element={<Demo/>} />
                   <Route path='*' element={<NoMatch/>} />
                 </Route> 
               </Routes>

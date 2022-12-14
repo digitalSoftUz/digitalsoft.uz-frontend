@@ -3,6 +3,10 @@
   padding-top: 200px;
 }
 
+.portfolio__galery {
+  position: relative;
+}
+
 .portfolio__galery h1 {
   font-family: 'Alien Robot';
   font-style: normal;
@@ -308,6 +312,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .portfolio__slider .slider__container {

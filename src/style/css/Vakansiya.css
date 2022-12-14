@@ -54,10 +54,14 @@
   position: relative;
 }
 
+.vacancy__left .ant-skeleton {
+  width: 75%;
+}
+
 .vacancy__left h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: calc(7vw);
+  font-size: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,6 +166,12 @@
   background: none;
   margin-top: 50px;
   cursor: pointer;
+}
+
+@media (max-width: 1920px) {
+  .vacancy__left h1 {
+    font-size: calc(7vw);
+  }
 }
 
 @media (max-width: 1440px) {

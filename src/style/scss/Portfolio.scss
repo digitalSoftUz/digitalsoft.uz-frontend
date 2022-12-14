@@ -4,6 +4,7 @@
   padding-top: 200px;
 }
 .portfolio__galery{
+  position: relative;
   h1{
     font-family: 'Alien Robot';
     font-style: normal;
@@ -225,6 +226,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   .slider__container{
     // background: white;
     width: 100%;

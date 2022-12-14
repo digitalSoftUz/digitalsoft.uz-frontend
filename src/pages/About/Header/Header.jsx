@@ -10,11 +10,15 @@ const Header = (props) => {
     <React.Fragment>
       <div className="header__xizmatlar container">
         <div className="header__left">
-          <h1>{data?.[`title_${til}`]}</h1>
-          <p>{data?.[`text_${til}`]}</p>
+          <h1
+            className='animate__animated animate__lightSpeedInLeft'
+          >{data?.[`title_${til}`]}</h1>
+          <p
+            className='animate__animated animate__lightSpeedInLeft'
+          >{data?.[`text_${til}`]}</p>
         </div>
         <div className="header__right">
-          <div className="header__video">
+          <div className="header__video animate__animated animate__fadeIn">
             <video 
               src={BaseUrl+data?.video} 
               height="auto"
@@ -23,7 +27,6 @@ const Header = (props) => {
               loop
               playsInline
               muted
-              // controls
             ></video>
           </div>
         </div>
@@ -31,7 +34,10 @@ const Header = (props) => {
         <div className="info__content container">
           {dataCard?.map((item, index)=>{
             return(
-              <div className="info__item" key={index}>
+              <div 
+                className="info__item animate__animated animate__backInUp" 
+                key={index}
+              >
                 <div className="info__img">
                   <img src={BaseUrl+item.icon} alt="" />
                 </div>
