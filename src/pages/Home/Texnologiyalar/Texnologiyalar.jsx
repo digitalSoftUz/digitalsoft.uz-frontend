@@ -13,7 +13,7 @@ const Texnologiyalar = (props) => {
   return (
     <React.Fragment>
       <div className="texnologiyalar container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefTech} className='ref__span'>
             {/* {ElementTech ? "Yes" : "No"} */}
           </span>

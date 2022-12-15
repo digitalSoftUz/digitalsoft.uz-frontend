@@ -6,7 +6,7 @@
 .portfolio__galery{
   position: relative;
   h1{
-    font-family: 'Alien Robot';
+    font-family: 'Alien Robot', 'Play';
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -45,7 +45,7 @@
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(4, 200px);
   grid-auto-rows: 200px;
   grid-gap: 30px;
   .filter__item:nth-child(14n+1){ grid-column: span 2; grid-row: span 2; }
@@ -227,6 +227,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: 1;
   .slider__container{
     // background: white;
     width: 100%;
@@ -456,6 +457,7 @@
   }
   .filter__results{
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 200px);
     margin-top: 50px;
   }
   .portfolio__page{
@@ -509,6 +511,7 @@
   .filter__results{
     margin-top: 20px;
     grid-gap: 10px;
+    grid-template-rows: repeat(8, 130px);
   }
   .portfolio__slider{
     margin: 50px auto;

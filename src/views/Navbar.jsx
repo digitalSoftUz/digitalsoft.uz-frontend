@@ -52,13 +52,13 @@ const Navbar = (props) => {
             id={burger ? "" : "blur__off"}
           >
             <div className="navbar container">
-              <a href='/' className="logo">
+              <NavLink to='/' className="logo" onClick={()=>{scrollTop(); x.handleLoad()}}>
                 <img src={LogoGrey} alt="" />
                 <div>
                   <p>DIGITAL</p>
                   <p>SOFT</p>
                 </div>
-              </a>
+              </NavLink>
               <button className={burger ? 'burger__btn' : 'burger__btn burger__close'} onClick={HandleBurger}>
                 <span></span>
                 <span></span>

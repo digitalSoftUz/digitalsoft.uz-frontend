@@ -45,7 +45,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       <div className="portfolio__galery container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefPHome} className='ref__span'>
             {/* {ElementPHome ? "Yes" : "No"} */}
           </span>

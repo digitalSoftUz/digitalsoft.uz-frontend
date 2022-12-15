@@ -66,7 +66,7 @@ const Contact = () => {
   return (
     <React.Fragment>
       <div className="contacts__container container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefContact} className='ref__span'>
             {/* {ElementContact ? "Yes" : "No"} */}
           </span>

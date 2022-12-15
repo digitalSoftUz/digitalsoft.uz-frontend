@@ -1,11 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Footer from "./views/Footer";
 import Navbar from './views/Navbar';
 import Mode from './context/context';
 import { DS } from './context/context';
-import FallbackLoading from "./FallbackLoading"
-import Loading from './components/Loading/Loading';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import "swiper/css";
 import 'animate.css';
@@ -30,43 +28,15 @@ export default function App(){
         {(x)=>{
           return(
             <React.Fragment>
-              { x.loading ? <Loading/> : ""}
               <Navbar data={x.homeData.contactInfo}/>
               <Routes>
-                <Route path='/' element={<Outlet />}>
-                  <Route index element={
-                    <Suspense fallback={FallbackLoading}>
-                      <Home />
-                    </Suspense>
-                    } 
-                  />
-                  <Route path='portfolio' element={
-                    <Suspense fallback={FallbackLoading}>
-                      <Portfolio />
-                    </Suspense>
-                    } 
-                  />
-                  <Route path='vakansiya' element={
-                    <Suspense fallback={FallbackLoading}>
-                      <Vakansiya />
-                    </Suspense>
-                    } 
-                  />
-                  <Route path='about' element={
-                    <Suspense fallback={FallbackLoading}>
-                      <About />
-                    </Suspense>
-                    } 
-                  />
-                  <Route path='xizmatlar' element={
-                    <Suspense fallback={FallbackLoading}>
-                      <Services />
-                    </Suspense>
-                    } 
-                  />
-                  <Route path='demo' element={<Demo/>} />
-                  <Route path='*' element={<NoMatch/>} />
-                </Route> 
+                <Route index path='/' element={ <Home /> }/>
+                <Route path='portfolio' element={ <Portfolio /> }/>
+                <Route path='vakansiya' element={  <Vakansiya /> }/>
+                <Route path='about' element={ <About /> }/>
+                <Route path='xizmatlar' element={ <Services /> }/>
+                <Route path='demo' element={<Demo/>} />
+                <Route path='*' element={<NoMatch/>} />
               </Routes>
               <Footer data={x.homeData.contactInfo}/>
             </React.Fragment>

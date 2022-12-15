@@ -12,7 +12,7 @@ const Hamkorlik = (props) => {
   return (
     <React.Fragment>
       <div className="hamkorlik container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefHamkor} className='ref__span'>
             {/* {ElementHamkor ? "Yes" : "No"} */}
           </span>

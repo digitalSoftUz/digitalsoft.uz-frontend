@@ -1,6 +1,6 @@
 import React from 'react';
-import App from './sphere';
-// import Earth from './Earth';
+// import App from './sphere';
+import Earth from './Earth';
 import i18next from 'i18next';
 import Logo from "../../../assets/icons/Logo.webp"
 
@@ -11,7 +11,7 @@ const Header = (props) => {
     <React.Fragment>
       <div className="header_home">
         <div className="earth">
-          <App/>
+          <Earth/>
           <img src={Logo} alt="" />
         </div>
         <div className="my__colors">

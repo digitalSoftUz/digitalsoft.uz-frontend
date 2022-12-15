@@ -126,7 +126,7 @@
 }
 
 .jamoa_Swiper .swiper-slide .div_name p {
-  font-family: 'Alien Robot';
+  font-family: 'Alien Robot', 'Play';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -310,7 +310,7 @@
 }
 
 .jamoa__info h1 {
-  font-family: 'Alien Robot';
+  font-family: 'Alien Robot', 'Play';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -452,14 +452,27 @@
   transition: 0.4s linear;
 }
 
+.jamoa__image div {
+  width: 100%;
+  height: 100%;
+}
+
+.jamoa__image .image__fadeIN {
+  opacity: 1;
+}
+
+.jamoa__image .image__fadeOUT {
+  opacity: 0;
+}
+
 .jamoa__image img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  -webkit-transition: 0.4s linear;
-  transition: 0.4s linear;
+  -webkit-transition: 1.5s linear;
+  transition: 1.5s linear;
 }
 
 .jamoa__image:nth-child(1) {

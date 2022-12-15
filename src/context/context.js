@@ -2,6 +2,7 @@ import React, { Component, createContext } from 'react';
 import axios from "axios";
 import i18next from 'i18next';
 import { BaseUrl } from '../contans';
+import Loading from '../components/Loading/Loading';
 
 export const DS = createContext();
 
@@ -64,6 +65,7 @@ class Mode extends Component {
         }}
         handleLoad={this.handleLoad}
       >
+        { this.state.loading ? <Loading/> : ""}
         {this.props.children}
       </DS.Provider>
      );

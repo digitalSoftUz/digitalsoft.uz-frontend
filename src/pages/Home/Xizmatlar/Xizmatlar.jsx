@@ -27,7 +27,7 @@ const Xizmatlar = (props) => {
   return (
     <React.Fragment>
       <div className="xizmatlar container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefXizmatlar} className='ref__span'>
             {/* {ElementXizmatlar ? "Yes" : "No"} */}
           </span>

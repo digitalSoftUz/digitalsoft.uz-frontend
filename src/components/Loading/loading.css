@@ -15,6 +15,7 @@
 }
 #eRTzrsdbaBq3_to {
   animation: eRTzrsdbaBq3_to__to 1500ms linear infinite normal forwards;
+  animation-delay: 0.1s;
 }
 @keyframes eRTzrsdbaBq3_to__to {
   0% {
@@ -38,6 +39,7 @@
 }
 #eRTzrsdbaBq3_tr {
   animation: eRTzrsdbaBq3_tr__tr 1500ms linear infinite normal forwards;
+  animation-delay: 0.1s;
 }
 @keyframes eRTzrsdbaBq3_tr__tr {
   0% {
@@ -55,6 +57,7 @@
 }
 #eRTzrsdbaBq6_to {
   animation: eRTzrsdbaBq6_to__to 1500ms linear infinite normal forwards;
+  animation-delay: 0.1s;
 }
 @keyframes eRTzrsdbaBq6_to__to {
   0% {
@@ -78,6 +81,7 @@
 }
 #eRTzrsdbaBq6_tr {
   animation: eRTzrsdbaBq6_tr__tr 1500ms linear infinite normal forwards;
+  animation-delay: 0.1s;
 }
 @keyframes eRTzrsdbaBq6_tr__tr {
   0% {

@@ -3,11 +3,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 // import img from "./earth.png"
 
 import { useGLTF } from "@react-three/drei";
+import { Loader } from "@react-three/drei"
 // import { useAnimations, OrbitControls } from "@react-three/drei";
 
 const Model = () =>{
   // const gltf = useGLTF("/Earth3d.gltf", true);
-  const { scene } = useGLTF("models/Earth3d.gltf")
+  const { scene } = useGLTF("models/scene.gltf")
   // const texture = useTexture(img)
   // const { scene, animations } = useGLTF("Earth3d.gltf")
   // const { actions } = useAnimations(animations, scene)
@@ -17,11 +18,12 @@ const Render = () => {
   const ref = useRef()
   // console.log(ref.current)
   useFrame((state, delta) => (ref.current.rotation.y += 0.004))
-  useFrame((state, delta) => (ref.current.rotation.x = 0.2))
+  useFrame((state, delta) => (ref.current.rotation.x = 0.25))
   return(
     <mesh
       ref={ref}
-      // scale={2.5}
+      scale={0.015}
+      // scale={2.2}
     >
       <Model/>
     </mesh>
@@ -31,14 +33,17 @@ const Render = () => {
 
 export default function Earth() {
   return(
-    <Canvas
-      colorManagement
-      camera={{position: [0,0,2], fov: 70}}
-    >
-      <Suspense fallback={null}>
-        {/* <OrbitControls  enablePan={false} enableZoom={false}/> */}
-        <Render/>
-      </Suspense>
-    </Canvas>
+    <React.Fragment>
+      <Canvas
+        // colorManagement
+        camera={{position: [0,0,2], fov: 70}}
+      >
+        <Suspense fallback={null}>
+          {/* <OrbitControls  enablePan={false} enableZoom={false}/> */}
+          <Render/>
+        </Suspense>
+      </Canvas>
+      <Loader />
+    </React.Fragment>
   )
 }

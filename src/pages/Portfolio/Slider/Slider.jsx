@@ -14,7 +14,7 @@ const Slider = (props) => {
   return (
     <React.Fragment>
       <div className="portfolio__slider">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefSlider} className='ref__span'>
             {/* {ElementSlider ? "Yes" : "No"} */}
           </span>

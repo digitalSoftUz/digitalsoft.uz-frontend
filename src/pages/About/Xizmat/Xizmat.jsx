@@ -15,7 +15,7 @@ const Xizmat = (props) => {
   return (
     <React.Fragment>
       <div className="xizmat container">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefXizmat} className='ref__span'>
             {/* {ElementXizmat ? "Yes" : "No"} */}
           </span>

@@ -89,6 +89,7 @@
   }
   .hamkorlik__bg {
     width: 150%;
+    bottom: auto;
   }
   .hamkorlik {
     margin-top: 50px;

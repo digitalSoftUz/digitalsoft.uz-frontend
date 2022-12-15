@@ -208,7 +208,7 @@
 }
 
 .xizmatlar_Swiper .swiper-slide h1 {
-  font-family: 'Alien Robot';
+  font-family: 'Alien Robot', 'Play';
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
@@ -333,7 +333,7 @@
 }
 
 .xizmatlar__top h1 {
-  font-family: 'Alien Robot';
+  font-family: 'Alien Robot', 'Play';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -455,7 +455,7 @@
 }
 
 .xizmatlar__item h1 {
-  font-family: 'Alien Robot';
+  font-family: 'Alien Robot', 'Play';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;

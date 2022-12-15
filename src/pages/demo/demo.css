@@ -7,6 +7,9 @@
 .demo__page h1{
   color: white;
 }
+.demo__page canvas{
+  height: 100vh !important;
+}
 /* .grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);

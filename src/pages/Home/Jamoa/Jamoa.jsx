@@ -1,6 +1,7 @@
 import React from 'react';
 import { Affix } from 'antd';
 import i18next from 'i18next';
+import Img from "react-cool-img";
 import { BaseUrl } from '../../../contans';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,24 +14,46 @@ const Jamoa = (props) => {
   return (
     <React.Fragment>
       <div className="jamoa">
-        <Affix>
+        <Affix offsetTop={100}>
           <span ref={RefJamoa} className='ref__span'>
             {/* {ElementJamoa ? "Yes" : "No"} */}
           </span>
         </Affix>
         <div className="jamoa__container container">
           <div className="jamoa__galery">
-            {dataImg?.map((item)=>{
+            {dataImg?.map((item, index)=>{
               return(
                 <div 
-                  key={item.id}
-                  className={
-                    ElementJamoa
-                    ?"jamoa__image animate__animated animate__fadeInUp"
-                    :"jamoa__image animate__animated animate__fadeOutDown"
-                  }
+                  key={index}
+                  className="jamoa__image"
                 >
-                  <img src={BaseUrl+item.image} alt="" />
+                    {/* <img
+                      // className={
+                      //   ElementJamoa
+                      //   ?"animate__animated animate__slideInLeft"
+                      //   :"animate__animated animate__slideOutLeft"
+                      // }
+                      src={BaseUrl+item.image} alt="" /> */}
+                  <Img
+                    // placeholder={}
+                    className={
+                      ElementJamoa
+                      ?"animate__animated animate__slideInUp"
+                      :"animate__animated animate__slideOutDown"
+                    }
+                    src={BaseUrl+item.image}
+                    debounce={1500} // Default is 300 (ms)
+                    alt="REACT COOL IMG"
+                  />
+                  {/* <LazyLoadImage 
+                    src={BaseUrl+item.image}
+                    alt="Image Alt"
+                    // className={
+                    //   ElementJamoa
+                    //   ?"image__fadeIN"
+                    //   :"image__fadeOUT"
+                    // }
+                  /> */}
                 </div>
               )
             })}
@@ -39,8 +62,8 @@ const Jamoa = (props) => {
             <h1 
               className={
                 ElementJamoa
-                ?"animate__animated animate__zoomIn"
-                :"animate__animated animate__zoomOut"
+                ?"animate__animated animate__slideInUp"
+                :"animate__animated animate__slideOutDown"
               }
             >
               {data?.[`title_${til}`]}
@@ -48,20 +71,21 @@ const Jamoa = (props) => {
             <p
               className={
                 ElementJamoa
-                ?"animate__animated animate__zoomIn"
-                :"animate__animated animate__zoomOut"
+                ?"animate__animated animate__slideInUp"
+                :"animate__animated animate__slideOutDown"
               }
             >{data?.[`text_${til}`]}</p>
             <div className="info__content">
               {dataInfo?.map((item, index)=>{
                 return(
                   <div 
-                    key={item.id}
+                    key={index}
                     className={
                       ElementJamoa
-                      ?"info__item animate__animated animate__backInUp"
-                      :"info__item animate__animated animate__backOutDown"
+                      ?"info__item animate__animated animate__fadeIn"
+                      :"info__item animate__animated animate__fadeOut"
                     }
+                    // className="info__item"
                     style={{"animationDelay":`${((index+1)/10)+0.1}s`}}
                   >
                     <div className="info__img">

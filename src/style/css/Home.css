@@ -38,6 +38,7 @@
 
 .home__page .filter__results {
   margin-top: 50px;
+  z-index: 1;
 }
 
 .home__page .texnologiyalar {
