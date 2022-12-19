@@ -12,7 +12,7 @@ const Header = (props) => {
       <div className="header_home">
         <div className="earth">
           <Earth/>
-          <img src={Logo} alt="" />
+          {/* <img src={Logo} alt="" /> */}
         </div>
         <div className="my__colors">
           <div className="color"></div>

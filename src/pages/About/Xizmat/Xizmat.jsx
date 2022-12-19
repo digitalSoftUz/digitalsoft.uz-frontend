@@ -53,7 +53,7 @@ const Xizmat = (props) => {
                   <p>{item[`title_${til}`]}</p>
                   <span>{item[`text_${til}`]}</span>
                 </div>
-                <a href="/">{t("MORE")} <ArrowLeft fill={"#FFFFFF"}/></a>
+                <a href="#Contact">{t("MORE")} <ArrowLeft fill={"#FFFFFF"}/></a>
               </div>
             )
           })}

@@ -65,8 +65,11 @@ const Portfolio = () => {
                 ElementPHome
                 ?"animate__animated animate__fadeInUp"
                 :"animate__animated animate__fadeOutDown"
-              }  
-            >{t("ALL")}</button>
+              }
+              id={category === 0 ? "category__active": ""}
+            >
+              {t("ALL")}
+            </button>
             {dataCategory?.map((item, index)=>{
               return(
                 <button 
@@ -76,8 +79,11 @@ const Portfolio = () => {
                     ?"animate__animated animate__fadeInUp"
                     :"animate__animated animate__fadeOutDown"
                   }
+                  id={category === item.id ? "category__active": ""}
                   style={{"animationDelay":`${((index+1)/10)+0.1}s`}}
-                >{item[`title_${til}`]}</button>
+                >
+                  {item[`title_${til}`]}
+                </button>
               )
             })}
           </div>

@@ -52,10 +52,21 @@ const Header = () => {
         <h1>{t("NAV3")}</h1>
         <div className="portfolio__filter">
           <div className='filter__btn'>
-            <button onClick={()=>CategoryChange(0)}>{t("ALL")}</button>
+            <button 
+              onClick={()=>CategoryChange(0)}
+              id={category === 0 ? "category__active": ""}  
+            >
+              {t("ALL")}
+            </button>
             {dataCategory?.map((item)=>{
               return(
-                <button key={item.id} onClick={()=>CategoryChange(item.id)}>{item[`title_${til}`]}</button>
+                <button 
+                  key={item.id} 
+                  onClick={()=>CategoryChange(item.id)}
+                  id={category === item.id ? "category__active": ""}
+                >
+                  {item[`title_${til}`]}
+                </button>
               )
             })}
           </div>

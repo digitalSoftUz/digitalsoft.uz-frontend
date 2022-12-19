@@ -25,13 +25,13 @@ const Texnologiyalar = (props) => {
             :"h1__title animate__animated animate__flipOutX"
           }
         >{t("TECH")}</h1>
-        <h2
+        {/* <h2
           className={
             ElementTech
             ?"h2__title animate__animated animate__flipInX"
             :"h2__title animate__animated animate__flipOutX"
           }
-        >{t("TECH_TITLE")}</h2>
+        >{t("TECH_TITLE")}</h2> */}
         <div className="tech__items">
           {dataCard?.map((item, index)=>{
             return(

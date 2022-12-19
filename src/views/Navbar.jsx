@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import i18next from 'i18next';
 import { DS } from '../context/context';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Button, Dropdown, Menu } from 'antd';
 import { useTranslation } from "react-i18next";
 import LogoGrey from "../assets/icons/Logo_grey.png";
@@ -52,13 +52,13 @@ const Navbar = (props) => {
             id={burger ? "" : "blur__off"}
           >
             <div className="navbar container">
-              <NavLink to='/' className="logo" onClick={()=>{scrollTop(); x.handleLoad()}}>
+              <Link to='/' className="logo" onClick={()=>{scrollTop(); x.handleLoad()}}>
                 <img src={LogoGrey} alt="" />
                 <div>
                   <p>DIGITAL</p>
                   <p>SOFT</p>
                 </div>
-              </NavLink>
+              </Link>
               <button className={burger ? 'burger__btn' : 'burger__btn burger__close'} onClick={HandleBurger}>
                 <span></span>
                 <span></span>

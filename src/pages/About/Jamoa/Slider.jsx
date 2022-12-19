@@ -1,8 +1,10 @@
 import React from 'react';
 import i18next from 'i18next';
+import Img from "react-cool-img";
 import { Lazy, Navigation } from "swiper";
 import { BaseUrl } from '../../../contans';
 import { Swiper, SwiperSlide } from "swiper/react";
+import LazyImg from "../../../assets/images/lazy.webp"
 
 const Slider = (props) => {
   var data = props.data
@@ -46,7 +48,14 @@ const Slider = (props) => {
         {data?.map((item)=>{
           return(
             <SwiperSlide key={item.id}>
-              <img className='team__img swiper-lazy' src={BaseUrl+item.image} alt="" />
+              {/* <img className='' src={BaseUrl+item.image} alt="" /> */}
+              <Img
+                placeholder={LazyImg}
+                className="team__img swiper-lazy"
+                src={BaseUrl+item.image}
+                debounce={1500} // Default is 300 (ms)
+                alt="REACT COOL IMG"
+              />
               <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               <div className='div_name'>
                 <p>{item[`name_${til}`]}</p>

@@ -16,7 +16,7 @@ const Jamoa = (props) => {
           {data?.map((item)=>{
             return(
               item.team.length === 0 
-              ? <div key={item.id}></div>
+              ? ""
               : <div 
                   key={item.id}
                 >

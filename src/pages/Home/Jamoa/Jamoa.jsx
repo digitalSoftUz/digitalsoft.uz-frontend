@@ -4,6 +4,7 @@ import i18next from 'i18next';
 import Img from "react-cool-img";
 import { BaseUrl } from '../../../contans';
 import { useInView } from 'react-intersection-observer';
+import LazyImg from "../../../assets/images/lazy.webp"
 
 const Jamoa = (props) => {
   var til = i18next.language
@@ -35,7 +36,7 @@ const Jamoa = (props) => {
                       // }
                       src={BaseUrl+item.image} alt="" /> */}
                   <Img
-                    // placeholder={}
+                    placeholder={LazyImg}
                     className={
                       ElementJamoa
                       ?"animate__animated animate__slideInUp"
